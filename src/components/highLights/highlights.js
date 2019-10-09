@@ -25,7 +25,7 @@ export default props => {
                             </li>
 
                             <li> 
-                            <a href="" onClick={}>
+                            <a href="" onClick={changeSlide}>
                                     <img src={game2} alt="" /> 
                                 </a>
                             </li>
