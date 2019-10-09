@@ -1,0 +1,15 @@
+.highlights{
+   /*mobile version margin-left: 60px;*/
+   display: flex;
+   flex-direction: row;
+}
+
+.inHighLights img{    
+    width: 100%;
+    height: auto;    
+}
+.inHighLights li{
+    float: left;
+    margin-right: -100%;
+    list-style: none;
+}
