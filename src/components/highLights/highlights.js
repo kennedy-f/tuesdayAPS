@@ -35,16 +35,18 @@ export default props => {
                 <div className="preview">
                     <ul>
                         <li>
-                            <p>teste </p>
+                            <img src={game1} alt=""/>
                         </li>
                         <li>
-                            <p>teste </p>
+                            <img src={game2} alt="" />
+                        </li>                        
+                    </ul>
+                    <ul>
+                        <li>
+                            <img src={game1} alt="" />
                         </li>
                         <li>
-                            <p>teste </p>
-                        </li>
-                        <li>
-                            <p>teste </p>
+                            <img src={game2} alt="" />
                         </li>
                     </ul>
                 </div>

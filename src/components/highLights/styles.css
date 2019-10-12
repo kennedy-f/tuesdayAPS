@@ -2,14 +2,35 @@
    /*mobile version margin-left: 60px;*/
    display: flex;
    flex-direction: row;
+   
+}
+.inHighLights{
+    max-width: 798px;
+    max-height: 452.2px;
 }
 
-.inHighLights img{    
-    width: 100%;
-    height: auto;    
-}
-.inHighLights li{
+.inHighLights .slide li{
     float: left;
     margin-right: -100%;
     list-style: none;
+}
+
+.inHighLights .slide img{    
+    width: 100%;
+    height: auto;    
+}
+.preview {
+    direction: flex;
+    flex-direction: row;
+}
+.preview ul li { 
+    margin: 0px;
+    padding: 0px;
+}
+.preview ul li {
+    list-style: none;
+}
+
+.preview ul li img {
+    width: 70%;
 }
