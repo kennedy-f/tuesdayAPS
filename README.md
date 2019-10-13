@@ -43,4 +43,4 @@ apenas se atentem ao prazo.
 
 Aqui no git vcs encontram <b>todas as versões com tudo que eu modifiquei desde o começo</b>, ele tmb mostra quem foi que mexeu em cada parte do código e o que alterou, e o melhor de tudo se vc fizer alguma merda e quiser recuperar um arquivo na versão anterior a merda feita, o git te dá essa possibilidade, afinal ele mantém todas as versões até a final salva, fica a dica ;) 
 
-##Eu fiz este projeto usando o REACT, uma biblioteca(lib) em JS (EMCMA SCRIPT). 
+## Eu fiz este projeto usando o REACT, uma biblioteca(lib) em JS (EMCMA SCRIPT). 
