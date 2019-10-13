@@ -1,4 +1,4 @@
-![myRealLogo](https://user-images.githubusercontent.com/56175244/66710852-de0ee800-ed56-11e9-97b2-1fa46522f67e.png)
+
 
 ## 
 PARA OS CORNOS DO MEU GRUPO QUE NÃO SABEM O QUE TÁ ACONTECENDO 
