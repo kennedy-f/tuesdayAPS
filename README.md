@@ -1,5 +1,6 @@
 ### Kennedy
-![Camada 1@0,3x](https://user-images.githubusercontent.com/56175244/66710880-8ae96500-ed57-11e9-93c0-639f4d10681e.png)
+
+![Camada 1 copiar@3x](https://user-images.githubusercontent.com/56175244/66710915-2d094d00-ed58-11e9-8f83-ee4532db9032.png)
 
 
 ## PARA OS CORNOS DO MEU GRUPO QUE NÃO SABEM O QUE TÁ ACONTECENDO 
