@@ -1,7 +1,8 @@
+### Kennedy
+![Camada 1@0,3x](https://user-images.githubusercontent.com/56175244/66710880-8ae96500-ed57-11e9-93c0-639f4d10681e.png)
 
 
-## 
-PARA OS CORNOS DO MEU GRUPO QUE NÃO SABEM O QUE TÁ ACONTECENDO 
+## PARA OS CORNOS DO MEU GRUPO QUE NÃO SABEM O QUE TÁ ACONTECENDO 
 
 # ALERTA 
 As pastas 'node_modules', 'public' e os arquivos '.gitignore', 'package-log.json', 'package.json' são ecenssiais para o bom funcionamento do React, não mexa nessas pastas e ou arquivos .
