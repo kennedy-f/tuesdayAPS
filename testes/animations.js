@@ -3,7 +3,7 @@
 anime({
     targets: '.container',
     keyframes: [
-        { translateY: -600 },
+        { translateY: -800 },
         { translateY: 0 }
     ],
     duration: 1300
@@ -55,25 +55,48 @@ function textAnimationOut() {
 
 // sidebar 
 
-
 anime({
         targets : '.insidebar', 
         translateX : -150,         
 });
 
-function showSidebar (){    
+function showSidebar() {       
+        console.log('vou abrir');
+        anime({
+            targets: '.insidebar',
+            translateX: 0,        
+            easing : 'linear',
+            duration : 300
+        });
+} 
+
+function closeSideBar(){
     anime({
         targets: '.insidebar',
-        translateX: 0,        
-        easing : 'linear',
-        duration : 300
-    });
-};
-
-function hideSidebar(){
-    anime({
-        targets : '.insidebar',
         easing: 'linear',
-        translateX : -150
+        translateX: - 150
     });
-};
+}
+
+//MouseOver Game Images 
+
+function showGameTitle(id, changeState) {
+    var label = document.querySelector('#' + id + ' label');    
+    
+    if (changeState == 1){
+        anime ({
+            targets: label,
+            scale : [0, 1.1, 1],
+            duration: 400,
+            easing : 'linear'
+        });
+        
+        label.style.display = 'initial';
+    } else {
+        label.style.display = 'none';    
+    }
+    
+    
+    
+    
+}
