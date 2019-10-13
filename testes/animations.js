@@ -47,7 +47,7 @@ function textAnimationOut() {
         opacity: '0'
     });
     anime({
-        targets: text,
+        targets: 'text',
         translateX: 0,
     });
 }
