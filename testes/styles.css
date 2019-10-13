@@ -26,7 +26,7 @@ body {
   max-height: 100%;  
 }
 
-.side-bar .insidebar{  
+.side-bar .insidebar{      
   background-color : #242424d3; 
   width: 160px;
   max-width:  15% ;
@@ -40,6 +40,7 @@ body {
 }
 
 .insidebar ul{  
+  width: 100%;
   margin: 10px 0px;
 }
 
@@ -47,6 +48,18 @@ body {
   text-align: center;
   padding: 3px 0px;
   list-style: none;    
+}
+
+.insidebar ul li a {
+  text-decoration: none;
+  color: white;
+
+}
+.insidebar button {
+  float: right;  
+  color: white;
+  background-color: #242424d3 ;  
+  border: 1px none #242424d3 ;
 }
 /* Container inicial, primeira coisa que aparece na pagina */
 .topContainer{  
@@ -153,7 +166,7 @@ body {
 
 .desc {  
   max-width: 100%;
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: white;  
 }
 
@@ -207,7 +220,7 @@ body {
 /* Inicio do container de conteudo da página index */ 
 .container { 
   margin: 0px;
-  padding-left: 50px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   max-width: 100%;  
@@ -219,6 +232,8 @@ body {
 }
 
 .container .ctgTitle { 
+  margin-top: 20px;
+  margin-bottom: 20px;
   max-width: 100%;
   width: 100%;
   text-align: center;
@@ -233,8 +248,67 @@ body {
   width: 100%;
   margin-right: 10px;  
   list-style: none;
+  position: relative;
 }
 .container .content ul li img {
   max-width: 100%;
   height: auto;
+  
+}
+.container .content ul li .gameInfo{
+  background-color: #29292981;
+  height: 100%;
+  padding-top: 20%;
+  position: absolute;
+  width: 100%;
+  text-align: center;    
+  display: none;
+}
+
+/* FOOTER */
+
+footer {   
+  display: flex;
+  flex-direction: column-reverse  ;
+  height: 200px;
+  margin-top: 30px;
+  width: 100%;  
+  /*background-color: #1d1d1d2a;*/
+  background-image: linear-gradient(#292929, #000000 );
+}
+
+.footer{
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: oblique;
+  margin-bottom: 15px;
+  align-self: center;
+  text-align: center;
+  color: #afafaf5e;
+}
+.footer a { 
+  text-decoration: none;
+  color:#afafaf5e ;
+}
+.footer a:hover {
+  color: white;
+}
+#span1 { 
+  margin-top: 10px;
+  color: #afafaf48;
+}
+#gitlogo {
+  margin-top: 10px;
+  width: 100px;
+  fill: #292929;  
+}
+#gitlogo:hover {
+  fill: white;
+  cursor: pointer;
+}
+#closeBtn{
+  color: #828282;
+}
+#closeBtn:hover{
+  cursor: pointer;
+  color:white;
 }
