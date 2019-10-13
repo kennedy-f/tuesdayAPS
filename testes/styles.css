@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+/* estilização da pagina inteira */ 
 * {
   margin: 0px;
   padding: 0px;
   
 }
 body {
-   font-family: 'Roboto' Arial, Helvetica, sans-serif;
+   font-family: 'Roboto', Arial, Helvetica, sans-serif;
    color: white; 
    background-color: #292929;
 }
 * body a li {
-   font-family: 'Roboto' Arial, Helvetica, sans-serif;
+   font-family: 'Roboto', Arial, Helvetica, sans-serif;
    color: white; 
 }
+/* estilização da barra lateral/sidebar */
  .side-bar {
   position: fixed;
   z-index: 1000;
@@ -46,8 +48,8 @@ body {
   padding: 3px 0px;
   list-style: none;    
 }
-
-.container{  
+/* Container inicial, primeira coisa que aparece na pagina */
+.topContainer{  
   max-width: 100%;  
   height: 100%;
   max-height: 589px;
@@ -55,19 +57,19 @@ body {
   flex-direction: column;
 }
 
-.container .highlights-games{
+.topContainer .highlights-games{
   display: flex;
   flex-direction: row;   
   max-height: 100%;
 }
 
-.container .highlights-games .slide {       
+.topContainer .highlights-games .slide {       
   width: 100%;
   max-height: 100%;
   max-width: 1100px;
   cursor: pointer;
 }
-.container .highlights-games .content .preview  {
+.topContainer .highlights-games .content .preview  {
   display: flex;  
   flex-direction: row;
   max-height: 100%;
@@ -90,21 +92,21 @@ body {
 }
 
 
-.container .content {
+.topContainer .content {
   background-color: #1d1d1d2a;
 }
 
-.container .highlights-games .content {
+.topContainer .highlights-games .content {
   display: flex;  
   max-width: 100%;
   max-height: 589px;
 }
 
-.container .highlights-games .content .highlightDesc {
+.topContainer .highlights-games .content .highlightDesc {
   max-width: 100%;
   height: 34.5%;
 }
-.container .highlights-games .content .preview {
+.topContainer .highlights-games .content .preview {
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -112,27 +114,27 @@ body {
   cursor: pointer;
 }
 
-.container .highlights-games .content .preview ul {
+.topContainer .highlights-games .content .preview ul {
   max-width: 100%;
   margin: 0px 0px 0px 1%; 
   max-height: 100%;
 }
 
-.container .highlights-games .content .preview ul li {
+.topContainer .highlights-games .content .preview ul li {
   list-style: none;
 }
 
-.container .highlights-games .content .preview ul li img {
+.topContainer .highlights-games .content .preview ul li img {
   max-width: 100%;
   max-height: 160px;
 }
 
-.container .highlights-games .content .preview ul li img:hover {
+.topContainer .highlights-games .content .preview ul li img:hover {
   opacity: 0.5;
 }
 
 
-.container .highlights-games .content .highlightDesc {
+.topContainer .highlights-games .content .highlightDesc {
   max-width: 650px;      
   display: flex;
   flex-direction: column;  
@@ -148,15 +150,48 @@ body {
   font-size: 25px; 
   text-shadow: 5px 5px 20px black;
 }
-.buttonArea {
-  display: flex;
-  flex-direction: row;
-  margin-left: 20px;
-  cursor: pointer;
+
+.desc {  
+  max-width: 100%;
+  font-size: 1.3em;
+  color: white;  
 }
-.btn-carrinho{
-  align-self: flex-end;  
+
+.gameDesc {  
+  padding: 10px;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 9.4em; 
+  line-height: 1em;
+  text-align:justify;
+}
+
+.desc.ellipsis::after {
+  padding: 10px;
+  content: "...";  
+  right: -12px; 
+  bottom: 4px;
+}
+
+.valor {
+  align-self: flex-end;
+  padding-right: 10px;
+  font-size: 2em;
+}
+
+.buttonArea {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;      
+}
+.buttonArea button {
+  margin-right: 5px;
+}
+.btn-carrinho{  
+  cursor: pointer;  
   width: 25%;
+  min-width: 25%;
   height: 50px;
   padding: 10px 5px 10px 5px;
   border-radius: 7px;
@@ -167,5 +202,39 @@ body {
   font-size: 15px;
   cursor: pointer;
 }
+/*Fim do primeiro container, eu sei ele ficou grande */ 
 
+/* Inicio do container de conteudo da página index */ 
+.container { 
+  margin: 0px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;  
 
+}
+.container .content {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .ctgTitle { 
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.container .content ul{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.container .content ul li {
+  width: 100%;
+  margin-right: 10px;  
+  list-style: none;
+}
+.container .content ul li img {
+  max-width: 100%;
+  height: auto;
+}
