@@ -14,7 +14,7 @@
 ## PARA OS CORNOS DO MEU GRUPO QUE NÃO SABEM O QUE TÁ ACONTECENDO 
 
 # ALERTA 
-As pastas 'node_modules', 'public' e os arquivos '.gitignore', 'package-log.json', 'package.json' são ecenssiais para o bom funcionamento do React, não mexa nessas pastas e ou arquivos .
+As pastas 'node_modules', 'public' e os arquivos '.gitignore', 'package-log.json', 'package.json' são essenciais para o bom funcionamento do React, não mexa nessas pastas e ou arquivos .
 
 # PRAZO 
 
