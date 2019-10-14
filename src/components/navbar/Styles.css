@@ -1,53 +1,49 @@
-
-
-.bm-item {
-  display: inline-block;
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-}
-
-.bm-item:hover {
-  color: black;
-}
-
-.bm-burger-button {
+.side-bar {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
+  z-index: 1000;
+  max-width: 3%;  
+  width: 100%;
+  min-width: 10px;
+  height: 100%;
+  max-height: 100%;  
 }
 
-.bm-burger-bars {
-  background: white;
+.side-bar .insidebar{      
+  background-color : #242424d3; 
+  width: 160px;
+  max-width:  15% ;
+  min-width: 90px;
+  position: fixed;
+  padding: 0px 10px;    
+  color: white;  
+  height : 100%;
+  max-height: 100%;
+
 }
 
-.bm-cross-button {
-  height: 12px;
-  width: 12px;
+.insidebar ul{  
+  width: 100%;
+  margin: 10px 0px;
 }
 
-.bm-cross {
-  background: #bdc3c7;
+ .insidebar ul li{   
+  text-align: center;
+  padding: 3px 0px;
+  list-style: none;    
 }
 
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;  
-  font-size: 1.15em;
-}
+.insidebar ul li a {
+  text-decoration: none;
+  color: white;
 
-.bm-morph-shape {
-  fill: #373a47;  
 }
-
-.bm-item-list {
-  color: #b8b7ad;
+.insidebar button {
+  float: right;  
+  color: white;
+  background-color: #242424d3 ;  
+  border: 1px none #242424d3 ;
 }
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+#closeBtn:hover{
+  cursor: pointer;
+  color:white;
 }
-

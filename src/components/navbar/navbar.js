@@ -1,39 +1,65 @@
 import React from 'react';
-import { slide as Menu } from 'react-burger-menu';
 
-// Style 
-import './Styles.css'; 
+import anime from 'animejs';
 
-//icons 
-import joystickIcon from '../../assets/icons8_controller_64px_1@2x.png'
+import './Styles.css';
 
-//The navbar 
-export default props => {
+
+
+setTimeout(() => {
+    anime({
+        targets: '.insidebar',
+        easing: 'linear',
+        translateX: - 150
+    });    
+}, 1500);
+
+anime({
+    targets: '.insidebar',
+    easing: 'linear',
+    translateX: - 150
+}); 
+
+
+
+function showSidebar() {
+    console.log('vou abrir');
+    anime({
+        targets: '.insidebar',
+        translateX: 0,
+        easing: 'linear',
+        duration: 300        
+    });
+    
+}
+
+function closeSideBar() {
+    anime({
+        targets: '.insidebar',
+        easing: 'linear',
+        translateX: - 150
+    });
+};
+
+export default props => {   
+    
+
     return (
-        <Menu>
-            <a className="menu-item" href="/">
-                Home
-      </a>
+        <>
+            <div className="side-bar" onMouseOver={showSidebar}>
+                <div className="insidebar" >
+                    <button id="closeBtn" onClick={closeSideBar}> X </button>
+                    <ul >
+                        <li  >  Home  </li>
+                        <li  > Games </li>
+                        <li  > WishList </li>
+                        <li  > MyAccount </li>
+                        <li  > Logoff </li>
+                    </ul>
+                    
+                </div>
 
-            <a className="menu-item" href="/laravel">
-                Minha conta
-      </a>
-
-            <a className="menu-item" href="/angular">
-                WishList
-      </a>
-
-            <a className="menu-item" href="/react">
-                Buy
-      </a>
-
-            <a className="menu-item" href="/vue">
-                Vcs que estão aí são tudo uns corno fodidos
-      </a>
-
-            <a className="menu-item" href="/node">
-                teste
-      </a>
-        </Menu>
+            </div>
+        </>
     );
 };
