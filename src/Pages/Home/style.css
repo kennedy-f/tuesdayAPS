@@ -1,0 +1,153 @@
+.topContainer{  
+  max-width: 100%;  
+  height: 100%;
+  max-height: 589px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topContainer .highlights-games{
+  display: flex;
+  flex-direction: row;   
+  max-height: 100%;
+}
+
+.topContainer .highlights-games .slide {       
+  width: 100%;
+  max-height: 100%;
+  max-width: 1100px;
+  cursor: pointer;
+}
+.topContainer .highlights-games .content .preview  {
+  display: flex;  
+  flex-direction: row;
+  max-height: 100%;
+  max-width: 710,9px;
+}
+.slide:hover{
+  opacity: 0.6;
+}
+.middleText {  
+  opacity: 0;
+  position: absolute;  
+  align-self: flex-end;
+  
+}
+.middleText .text {  
+  color: white;
+  font-size: 50px;
+  align-self: flex-end;
+  
+}
+
+
+.topContainer .content {
+  background-color: #1d1d1d2a;
+}
+
+.topContainer .highlights-games .content {
+  display: flex;  
+  max-width: 100%;
+  max-height: 589px;
+}
+
+.topContainer .highlights-games .content .highlightDesc {
+  max-width: 100%;
+  height: 34.5%;
+}
+.topContainer .highlights-games .content .preview {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.topContainer .highlights-games .content .preview ul {
+  max-width: 100%;
+  margin: 0px 0px 0px 1%; 
+  max-height: 100%;
+}
+
+.topContainer .highlights-games .content .preview ul li {
+  list-style: none;
+}
+
+.topContainer .highlights-games .content .preview ul li img {
+  max-width: 100%;
+  max-height: 160px;
+}
+
+.topContainer .highlights-games .content .preview ul li img:hover {
+  opacity: 0.5;
+}
+
+
+.topContainer .highlights-games .content .highlightDesc {
+  max-width: 650px;      
+  display: flex;
+  flex-direction: column;  
+  
+}
+
+.highlightDesc h1 {
+  text-align: center;
+}
+.highlightDesc p {  
+  padding-left: 20px;
+  
+  font-size: 25px; 
+  text-shadow: 5px 5px 20px black;
+}
+
+.desc {  
+  max-width: 100%;
+  font-size: 1.1em;
+  color: white;  
+}
+
+.gameDesc {  
+  padding: 10px;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 9.4em; 
+  line-height: 1em;
+  text-align:justify;
+}
+
+.desc.ellipsis::after {
+  padding: 10px;
+  content: "...";  
+  right: -12px; 
+  bottom: 4px;
+}
+
+.valor {
+  align-self: flex-end;
+  padding-right: 10px;
+  font-size: 2em;
+}
+
+.buttonArea {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;      
+}
+.buttonArea button {
+  margin-right: 5px;
+}
+.btn-carrinho{  
+  cursor: pointer;  
+  width: 25%;
+  min-width: 25%;
+  height: 50px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 7px;
+  background-color: #3aff0099;
+  box-shadow: 3px 5px 30px black;
+  border-color: #10460099;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
