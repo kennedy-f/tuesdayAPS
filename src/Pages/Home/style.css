@@ -53,7 +53,7 @@
 
 .topContainer .highlights-games .content .highlightDesc {
   max-width: 100%;
-  height: 34.5%;
+  height: 100%;
 }
 .topContainer .highlights-games .content .preview {
   display: flex;
@@ -84,7 +84,8 @@
 
 
 .topContainer .highlights-games .content .highlightDesc {
-  max-width: 650px;      
+  max-width: 650px; 
+  max-height: 100%;     
   display: flex;
   flex-direction: column;  
   
@@ -92,62 +93,40 @@
 
 .highlightDesc h1 {
   text-align: center;
-}
-.highlightDesc p {  
-  padding-left: 20px;
-  
+  color: #bebebe;
   font-size: 25px; 
   text-shadow: 5px 5px 20px black;
 }
 
-.desc {  
-  max-width: 100%;
-  font-size: 1.1em;
-  color: white;  
-}
-
-.gameDesc {  
-  padding: 10px;
-  display: inline-block;
-  word-wrap: break-word;
+.highlightDesc span { 
+  height: 250px;
+  padding: 8px;
+  color: white;
+  text-align: justify;
+  font-size: 1.2em;
   overflow: hidden;
-  max-height: 9.4em; 
-  line-height: 1em;
-  text-align:justify;
 }
 
-.desc.ellipsis::after {
-  padding: 10px;
-  content: "...";  
-  right: -12px; 
-  bottom: 4px;
+.highlightDesc #valor {
+  margin-top: 10px;
+  color: white;
+  font-size: 1.6em;
+  text-align: end;
 }
-
-.valor {
-  align-self: flex-end;
-  padding-right: 10px;
-  font-size: 2em;
-}
-
 .buttonArea {
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;      
+  display: flex;        
 }
+
 .buttonArea button {
   margin-right: 5px;
+  border: solid 1px #01b7ffc5; 
+  background-color: #ff0000c5 ;
 }
-.btn-carrinho{  
-  cursor: pointer;  
-  width: 25%;
-  min-width: 25%;
-  height: 50px;
-  padding: 10px 5px 10px 5px;
-  border-radius: 7px;
-  background-color: #3aff0099;
-  box-shadow: 3px 5px 30px black;
-  border-color: #10460099;
-  color: white;
-  font-size: 15px;
+
+.buttonArea button:hover {
   cursor: pointer;
+  margin-right: 5px;
+  border: solid 1px #01b7ffc5; 
+  background-color: #000000c5 ;
 }

@@ -58,7 +58,7 @@ export default props => {
 
                         <div className="highlightDesc">
                             <h1>Forza Horizon 4</h1>
-                            <span className="gameDesc">
+                            <span >
                                 Texto do jogo vai ter que ocupar o maximo possivel
                                 sem quebrar as imagens vamos ver se quebra não tá quebrando
                                 legal, então tá tudo certo vamos encher mais e ver até onde vai,
@@ -74,8 +74,12 @@ export default props => {
                                 porra essa, essa quebrou uhu, veja o tamanho da imagem tá esticando <br />
                                 interessante
                             </span>
-                            <h3 className="valor"> R$ 150,00</h3>
-                            <button> adicionar ao carrinho</button>
+                            <h3 id="valor" > R$ 150,00</h3>
+                            <div className="buttonArea">
+                                <div></div>
+                                <button> adicionar ao carrinho</button>
+                                <button> adicionar ao carrinho</button>
+                            </div>
                         </div>
 
 
