@@ -18,6 +18,8 @@
 Para iniciar o servidor abra o cmd dentro da pasta backend e digite 'yarn dev' ou 'npm dev' 
 Para iniciar o frontend digite no CMD 'yarn start' ou 'npm start' 
 
+para abrir o servidor dentro da pasta, o VS code tem um terminal dentro dele só apertar cntrl+', que ele vai se abrir, após isso 'cd ./nomeDaPasta'.. ex: 'cd ./frontend' ou 'cd ./backend' . . Após esse comando vc vai estar dentro da pasta, para voltar 'cd ..' 
+
 A pasta com o conceito das paginas está em 'frontend/testes' 
 
 Vocês podem baixar apenas, eu irei upar as suas modificações apenas se me mostrar que está funcionando o que tu fez. 
