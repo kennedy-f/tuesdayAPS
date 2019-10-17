@@ -14,7 +14,19 @@
 ## PARA OS CORNOS DO MEU GRUPO QUE NÃO SABEM O QUE TÁ ACONTECENDO 
 
 # ALERTA 
-As pastas 'node_modules', 'public' e os arquivos '.gitignore', 'package-log.json', 'package.json' são essenciais para o bom funcionamento do React, não mexa nessas pastas e ou arquivos .
+
+Para iniciar o servidor abra o cmd dentro da pasta backend e digite 'yarn dev' ou 'npm dev' 
+Para iniciar o frontend digite no CMD 'yarn start' ou 'npm start' 
+
+A pasta com o conceito das paginas está em 'frontend/testes' 
+
+Vocês podem baixar apenas, eu irei upar as suas modificações apenas se me mostrar que está funcionando o que tu fez. 
+
+Material para estudos do que foi e está sendo usado aqui https://rocketseat.com.br/starter 
+
+Qualquer duvidas só me chamar no Discord ou wpp. 
+
+PS: A ÚNICA LINGUAGEM USADA AQUI FOI <strong> JAVASCRIPT </strong> NADA MAIS NADA MENOS. 
 
 # PRAZO 
 
@@ -31,9 +43,7 @@ Instalar o YARN é o que eu uso muita das vezes no lugar do NPM.
 
 # Obrigatório: 
 
-<b> 1- Instale na sua maquina o react e o nodeJS, só seguir qql tuturial na web. </b>
-
-2- A pasta <b>'testes' dentro de 'src'</b> contem a página e os scripts em <b>HTML puro e JAVASCRIPT puro</b>, sem uso do react, a única coisa a mais ali que vcs vão encontrar é a lib(biblioteca) animeJS, que eu usei para fazer as animações um pouco mais rapido --> https://animejs.com/
+<b> 1- Ter instalado na sua maquina o nodeJS, só seguir qql tuturial na web. </b>
 
 # OBS
 
