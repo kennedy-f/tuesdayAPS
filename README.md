@@ -18,7 +18,8 @@ As pastas 'node_modules', 'public' e os arquivos '.gitignore', 'package-log.json
 
 # PRAZO 
 
-Vale lembrar que não teremos que apresentar este projeto ainda, porém, já foi dito pelo professor que essa semana (13/10 até 19/10) ele iria começar a marcar as apresentações para as semanas seguintes, então temos um prazo um pouco mais curto do que esperavamos.  
+Dia da entrega 12/10/2019 
+Comecem a trabalhar cornada
 
 ## COMO TRABALHAR COM ESSE PROJETO 
 
