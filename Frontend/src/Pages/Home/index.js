@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './style.css';
 import Anime from 'animejs';
 
@@ -33,7 +33,8 @@ function textAnimationOut() {
 
 var game = {
     thubmnail : Game1, 
-    title : 'Forza Horizon 4'
+    title : 'Forza Horizon 4',
+    text : ' Texto do jogo vai ter que ocupar o maximo possivel sem quebrar as imagens vamos ver se quebra não tá quebrando legal, então tá tudo certo vamos encher mais e ver até onde vai, será que no fim vai quebrar o espaço da div? Eu espero que não, ainda to colocando mais textos, caralho cabe texto pra porra Não da nem pra acreditar slc eu pensei que ia ficar pequeno  Bom acho que vai caber tudo e mais  Mais uma linha  mais outra  A ultima eu acho  Essa vai quebrar a div  tá essa vai  porra essa, essa quebrou uhu, veja o tamanho da imagem tá esticando  interessante'
 }
 
 function changeSlide(){
@@ -90,7 +91,8 @@ function changeSlide(){
                                         game.thumbnail = Game1;      
                                         game.title = 'Forza Horizon 4' 
                                         changeSlide ();     
-                                        setTimeout(() => {textAnimationIn()}, 1500)                                     
+                                        setTimeout(() => {textAnimationIn()}, 1500)                                                                
+                                
                                     }} alt="" /> 
                                 </li>
 
@@ -109,20 +111,7 @@ function changeSlide(){
                         <div className="highlightDesc">
                             <h1>Forza Horizon 4</h1>
                             <span >
-                                Texto do jogo vai ter que ocupar o maximo possivel
-                                sem quebrar as imagens vamos ver se quebra não tá quebrando
-                                legal, então tá tudo certo vamos encher mais e ver até onde vai,
-                                será que no fim vai quebrar o espaço da div? Eu espero que não,
-                                ainda to colocando mais textos, caralho cabe texto pra porra
-                                Não da nem pra acreditar slc eu pensei que ia ficar pequeno <br />
-                                Bom acho que vai caber tudo e mais <br />
-                                Mais uma linha <br />
-                                mais outra <br />
-                                A ultima eu acho <br />
-                                Essa vai quebrar a div <br />
-                                tá essa vai <br />
-                                porra essa, essa quebrou uhu, veja o tamanho da imagem tá esticando <br />
-                                interessante
+                                {game.text}
                             </span>
 
                             <h3 id="valor" > R$ 150,00</h3>
