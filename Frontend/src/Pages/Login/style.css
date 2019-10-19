@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    max-height: 100%;
-    
+    max-height: 100%;            
+    position:absolute;
+    margin-top: 5%;
+    margin-left: 30%;
 }
 .content_box{
     align-self: center;
@@ -21,10 +23,16 @@
 
 }
 .login span {
-    color:white;
+    color: #95f726;
+    text-shadow: 1px 1px 10px;
+
 }
+/* ecd92e*/
 .login h3{
-    color:white; 
+    color:#95f726; 
+    text-align: center;
+} 
+#create_acount {
     text-align: center;
 }
 .login input {
@@ -42,12 +50,13 @@ h2 {
     display: flex;
     background-color: #303030;
     border:#3a3a3a solid 1px; 
+    margin-bottom: 10px;
 }
 
 .confirmation_btn:hover{
     cursor: pointer;
     background-color: #3a3a3a;
-    border:#525252 solid 1px; 
+    border:#95f726 solid 1px; 
 }
 
 .button_text{
@@ -117,6 +126,8 @@ h2 {
     font-style: oblique;
     border: #303030 ;
     color: white;
+    height: 30px;
+    margin-bottom: 10px;   
     
 }
 .login input::placeholder{

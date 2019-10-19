@@ -1,0 +1,22 @@
+h1 {
+  margin-top: 10px;
+     margin-left: 10px;     
+     color: white;
+     text-transform: uppercase;
+     cursor: pointer;   
+}
+.listinha li {
+     margin-top: 10px;
+     margin-left: 10px;
+     font-size: 20px;
+     color: white;
+     text-transform: uppercase;
+     cursor: pointer;
+}
+
+.listinha li:hover {     
+     color: #95f726;
+     text-shadow: 1px 1px 10px;
+     text-transform: uppercase;
+     cursor: pointer;
+}

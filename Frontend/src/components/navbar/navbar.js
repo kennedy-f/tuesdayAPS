@@ -53,7 +53,7 @@ export default props => {
                         <li  >  Home  </li>
                         <li  > Games </li>
                         <li  > WishList </li>
-                        <li  > MyAccount </li>
+                        <li  > <a href="/login"> MyAccount  </a>  </li>
                         <li  > Logoff </li>
                     </ul>
                     
