@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './style.css';
 import Anime from 'animejs';
 
 import Game1 from '../../../src/assets/CapaForzaHorizon4Wivernz@2x.png'
 import Game2 from '../../../src/assets/FundoAssassinsCreedUnityGoldEditionELAMIGOSWivernz@2x.png'
 
-// <li> <img src={game1} alt="" /> </li> 
-//<li> <img src={game1} alt="" /> </li>
+
+
+export default function Home() {
+
+
 function textAnimationIn() {
     Anime({
         targets: '.middleText',
@@ -29,17 +32,26 @@ function textAnimationOut() {
 }
 
 var game = {
-    thumbnail : Game1,
+    thubmnail : Game1, 
     title : 'Forza Horizon 4'
-} 
-console.log(game.thumbnail);
-export default props => {
-    return (
+}
+
+function changeSlide(){
+    var highlightThumbnail = document.querySelector ('.slide');     
+    var highlightText = document.querySelector ('.text');  
+    highlightThumbnail.src = game.thumbnail; 
+    highlightText.innerHTML = game.title;     
+}
+
+    return (        
+
+
         <>
             <div className="topContainer">
                 <div className="highlights-games">
                     <div className="content" onMouseOver={textAnimationIn} onMouseOut={textAnimationOut}>
-                        <img src={game.thumbnail} alt="" className="slide" />
+                        <img src={game.thubmnail} alt="" className="slide" />
+                       
                         <div className="middleText">
                             <div className="text"> {game.title} </div>
                         </div>
@@ -48,16 +60,49 @@ export default props => {
                     <div className="content">
                         <div className="preview">
                             <ul>
-                                <li id="game1" > <img src={Game1} alt="" /> </li>
-                                <li id="game2" > <img src={Game2} alt="" onMouseOver={() => {
-                                    game.thumbnail = Game2; 
-                                    console.log('troca')
-                                    console.log(game.thumbnail);}
-                                }/> </li>
+                                <li > 
+                                    <img src={Game1}
+                                    onMouseOver={() => {                                                              
+                                        game.thumbnail = Game1;      
+                                        game.title = 'Forza Horizon 4' 
+                                        changeSlide ();    
+                                        setTimeout(() => {textAnimationIn()}, 1500)                                                                                
+                                    }} 
+                                    alt="" /> 
+                                </li>
+
+                                <li > 
+                                    <img src={Game2} alt="" 
+                                    onMouseOver={() => {                                        
+                                        game.thumbnail = Game2;      
+                                        game.title = 'Assasins creed Unity' 
+                                        
+                                        changeSlide ();
+                                        setTimeout(() => {textAnimationIn()}, 1500)         
+                                        }}/>
+                                </li>
                             </ul>
+
                             <ul>
-                                <li id="game3" > <img src={Game1} alt="" /> </li>
-                                <li id="game4" > <img src={Game2} alt="" /> </li>
+                                <li > 
+                                    <img src={Game1}
+                                     onMouseOver={() => {                                        
+                                        game.thumbnail = Game1;      
+                                        game.title = 'Forza Horizon 4' 
+                                        changeSlide ();     
+                                        setTimeout(() => {textAnimationIn()}, 1500)                                     
+                                    }} alt="" /> 
+                                </li>
+
+                                <li  > 
+                                    <img src={Game2} alt="" 
+                                    onMouseOver={() => {                                        
+                                        game.thumbnail = Game2;      
+                                        game.title = 'Assasins creed Unity' 
+                                        changeSlide ();
+                                        setTimeout(() => {textAnimationIn()}, 1500) 
+                                        }} /> 
+                                </li>
                             </ul>
                         </div>                        
 
