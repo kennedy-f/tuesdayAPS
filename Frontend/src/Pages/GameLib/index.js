@@ -1,43 +1,43 @@
 import React, { useState } from 'react';
 import './style.css'; 
+import api from '../../services/api';
 
 
 import Game1 from '../../../src/assets/CapaForzaHorizon4Wivernz@2x.png'
 
-export default props => {
+export default function ({history}) {
 
     const [ game , setGame] = useState ([]); 
 
     
     return (
         <>
-        <div className="sideContainer">
+        <div className="side-bar">
 
-            <h1> Meus Jogos </h1>
-
-            <ul className="listinha ">            
-                    <li>                    
-                    <h3> forza </h3>
-                    </li>
-                    <li>                    
-                        <h3> forza </h3>
-                    </li>
-                    <li>                    
-                        <h3> forza </h3>
-                    </li>
-                    <li>
-                        <h3> forza </h3>
-                    </li>
-                    <li>
-                        <h3> forza </h3>
-                    </li>
-                    <li>
-                        <h3> forza </h3>
-                    </li>
-
-                    
-            </ul>
-                {game.every}
+            <div className="insidebar">
+                <h2> Meus Jogos </h2>
+                    <ul className="listinha ">  
+                        <li>                    
+                            <h4> Jogo 1 </h4>
+                        </li>                   
+                        <li>
+                            <h4> Jogo 2 </h4>
+                        </li>                   
+                        <li>
+                            <h4> Jogo 3 </h4>
+                        </li>                   
+                        <li>
+                            <h4> Jogo 4 </h4>
+                        </li>                   
+                        <li>
+                            <h4> Jogo 5 </h4>
+                        </li>                   
+                        <li>
+                            <h4> Jogo 6 </h4>
+                        </li>   
+                    </ul>                    
+                </div>
+                
         </div>
 
         </>

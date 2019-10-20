@@ -37,13 +37,15 @@ var game = {
 
 function changeSlide(){
     var highlightThumbnail = document.querySelector ('.slide');     
-    var highlightTitle = document.querySelector ('.text');  
+    var highlightTitle = document.querySelector('#highlightTile');  
+    var highlightSpan = document.querySelector ('.text')
     var highlightText = document.querySelector ('.highlightDesc span')
     var highlightPrice = document.querySelector('#valor'); 
     highlightThumbnail.src = game.thumbnail; 
     highlightTitle.innerHTML = game.title;  
+    highlightSpan.innerHTML = game.title;   
     highlightText.innerHTML = game.text;   
-    highlightPrice.innerHTML = game.price; 
+    highlightPrice.innerHTML = 'R$ ' + game.price; 
 }
 
     return (        
@@ -115,16 +117,16 @@ function changeSlide(){
                         </div>                        
 
                         <div className="highlightDesc">
-                            <h1>Forza Horizon 4</h1>
+                            <h1 id="highlightTile">{game.title}</h1>
                             <span >
                                 {game.text}
                             </span>
 
-                            <h3 id="valor" > {game.price} </h3>
+                            <h1 id="valor" > R$ {game.price} </h1>
 
                             <div className="buttonArea">
                                 <div></div>
-                                <button> adicionar ao carrinho</button>
+                                <button> favoritar </button>
                                 <button> adicionar ao carrinho</button>
                             </div>
                         </div>
@@ -132,6 +134,7 @@ function changeSlide(){
                     </div>
                 </div>
             </div>
+ 
         </>
     );
 };

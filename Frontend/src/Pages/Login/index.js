@@ -1,11 +1,28 @@
-import React from 'react'; 
+import React, {useState, useEffect} from 'react'; 
 import './style.css';
+import api from '../../services/api';
 
-/*import Facebook_logo from '../../assets/facebook_logo.svg'
-import Google_logo from '../../assets/search.svg'*/
+export default function ({history})  {
 
-export default props => {
+    const [login, setLogin] = useState('');
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        const response = await api.post('/login', { login });
+
+        const { _id } = response.data
+
+        localStorage.setItem('user', _id);
+
+        history.push('/login');
+
+    }
+
+
     return (
+
+
         <>
            <div className="container_login">
                <div className="content_login">
@@ -17,13 +34,13 @@ export default props => {
                        <input type="text" name="user" id="user" placeholder="usuario / e-mail"/>
                        <span> Senha </span>
                        <input type="text" name="password" id="password" placeholder="senha"/>
-                       <button className="confirmation_btn">
-                           <span className="button_text">
+                       <button className="confirmation_btn" >
+                           <span className="button_text" >
                                Entrar
                            </span>
                        </button>                       
                    </div>
-                   <div className="login">
+                   <div className="createAccount">
                        <h3> Ainda não é cadastrado </h3>
                         <span id="create_acount">  Crie sua conta  </span>
                         <input type="text" placeholder="Nome de Usuario"/>
