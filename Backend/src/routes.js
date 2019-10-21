@@ -4,13 +4,14 @@ const uploadConfig = require('./config/upload');
 
 const GameController = require('./controller/GameController');
 
-const UserController = require('./controller/UserController');
+const CreateAccountController = require('./controller/CreateAccountController');
+const LoginController = require('./controller/LoginController');
 
 const routes = express.Router(); 
 const uploads = multer(uploadConfig); 
 
-routes.post('/login', UserController.store);
-routes.get('/login', UserController.show);
+routes.post('/createUser', CreateAccountController.store);
+routes.post('/userLogin', LoginController.store);
 routes.post('/addGame', uploads.single('thumbnail'), GameController.store);
 
 
