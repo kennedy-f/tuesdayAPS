@@ -1,22 +1,25 @@
-.container_login {
+#loginPage{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%; 
     max-width: 100%;
-    max-height: 100%; 
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-bottom: 65px;
+    max-height: 100%;
 }
-.content_box{
+.container_login {
+    display: flex;    
     align-self: center;
-    
+    padding-top: 10%;    
+}
+
+.content_box{
+    align-self: center;    
     display: flex; 
     flex-direction: row;     
     border: #95f726 solid 1px;
-    box-shadow: 1px 1px 10px;
-    
-    max-height:100%;
+    box-shadow: 1px 1px 10px;   
 }
+
 .login form{
     display: flex; 
     flex-direction: column; 
@@ -29,7 +32,6 @@
     text-shadow: 1px 1px 10px;
 
 }
-/* ecd92e*/
 .login form h3{
     color:#95f726; 
     text-align: center;
@@ -54,7 +56,6 @@
     text-shadow: 1px 1px 10px;
 
 }
-/* ecd92e*/
 .createAccount h3{
     color:#95f726; 
     text-align: center;
@@ -101,62 +102,6 @@ h2 {
     width: 100%;
     height: 100%;            
 }
-/*
-#facebook_btn {
-    width: 200px; 
-    height: 50px;
-    align-self: center;
-    display: flex;
-    background-color: #303030;
-    border:#3a3a3a solid 1px; 
-}
-#facebook_btn:hover {
-    cursor: pointer;
-    background-color: #3a3a3a;
-    border:#525252 solid 1px; 
-}
-#facebook_btn span {
-    align-self: center;
-    margin: 0px 0px 0px 5px;
-    color: white;
-}
-
-#facebook_icon{
-    fill: white;
-    width: 30px;
-    height: 30px;    
-    margin: 0px 0px px 0px ;              
-    align-self: flex-start;
-}        
-
-#google_btn {
-    margin-top: 5px;
-    width: 200px; 
-    height: 50px;
-    align-self: center;
-    display: flex;
-    background-color: #303030;
-    border:#3a3a3a solid 1px; 
-}
-#google_btn:hover {
-    cursor: pointer;
-    background-color: #3a3a3a;
-    border:#525252 solid 1px; 
-}
-#google_btn span {
-    align-self: center;
-    margin: 0px 0px 0px 5px;
-    color: white;
-}
-
-#google_icon{            
-    width: 30px;
-    height: 30px;
-
-    margin: 0px 0px px 0px ;              
-    align-self: flex-start;
-}
-*/
 .login input{
     background-color: #353535;
     font-style: oblique;
@@ -199,4 +144,15 @@ h2 {
     font-size: 1em;       
     width: 100%;
     height: 100%;            
+}
+
+#wrongPassword {
+    color: #f15c5c; 
+    display: none;
+}
+
+.loginStatus{
+    color: #ff0000;  
+    text-shadow: 1px 1px 10px;    
+    display: none;
 }

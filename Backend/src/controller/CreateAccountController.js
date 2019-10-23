@@ -22,6 +22,7 @@ module.exports = {
 
         
         return res.json(user);
-    },
+    }
+
 
 };

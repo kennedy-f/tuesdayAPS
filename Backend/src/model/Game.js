@@ -6,8 +6,13 @@ const GameSchema = new mongoose.Schema ({
     desc: String,    
     requirements: [String],
     catg : [String],
-    price: Number  
+    price: Number , 
+    highlight : String
     
+}, {
+    toJSON: {
+        virtuals: true,
+    },
 });
 
 GameSchema.virtual('thumbnail_url').get(function(){

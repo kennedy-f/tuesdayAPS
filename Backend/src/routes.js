@@ -12,6 +12,7 @@ const uploads = multer(uploadConfig);
 
 routes.post('/createUser', CreateAccountController.store);
 routes.post('/userLogin', LoginController.store);
+routes.get('/games', GameController.show);
 routes.post('/addGame', uploads.single('thumbnail'), GameController.store);
 
 

@@ -10,33 +10,32 @@
 html, body, #root{
   min-height: 100%; 
   max-width: 100%;
+  margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background: #292929 ;
   background-size: cover;
   -webkit-font-smoothing: antialiased !important;
 } 
 
-body, input, button {
+body, input, button, a {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 14px;  
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10px;
-}
 
-.container p {  
-  font-size: 3em;
-  color: white;
+.navbar{
+  z-index: 9;  
 }
-.container #App {
-  height: 100vh;
-}
-.container .content {
+.Page{
+  margin-top: 50px;
   display: flex;
-  flex-direction: row;
-  margin-left: 7vw;
+}
+.page{
+  display: flex;
+}
+#footer{         
+  margin-top:calc(3% + 4px);
 }

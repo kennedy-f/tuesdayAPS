@@ -1,10 +1,20 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  
+}
+body {
+   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+   color: white; 
+   background-color: #292929;
+}
 #header {
     display: flex;
     flex-direction: column;
     height: 50px;
     width: 100%;
-    background-color: #222222d0;
-    position: fixed;    
+    background-color: #0000004f;
+    position: fixed;
 }
 #header ul {
     display: flex;
@@ -18,10 +28,10 @@
     
 }
 a { 
-    color: #95f726;       
+    color: green;       
     text-decoration: none;
 }
 a:hover { 
-    color: #bebebe;       
+    color: #292929;       
     text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './Pages/Home'; 
+import Teste from './Pages/Teste'; 
 import Game from './Pages/Games'; 
 import Login from './Pages/Login'; 
 import Biblioteca from './Pages/GameLib'; 
@@ -14,6 +15,7 @@ export default function Routes (){
                 <Route path="/Games123" component={Game} />
                 <Route path="/login" component={Login}/>
                 <Route path="/biblioteca" component={Biblioteca} />                
+                <Route path="/teste" component={Teste} />                
             </Switch>
         </BrowserRouter>
     )
