@@ -5,7 +5,7 @@ const GameSchema = new mongoose.Schema ({
     name : String,
     desc: String,    
     requirements: [String],
-    catg : [String],
+    catgs : [String],
     price: Number , 
     highlight : String
     

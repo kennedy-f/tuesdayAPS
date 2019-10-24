@@ -13,22 +13,39 @@ import Game1 from '../../../src/assets/CapaForzaHorizon4Wivernz@2x.png'
 export default function Teste() {
 
     const [highlightGames, setHighlightGames] = useState([]); 
+    const [catgs, setCatgs] = useState(''); 
+    const [actionCategorie, setActionCategorie] = useState([]); 
+    const [raceCategorie, setRaceCategorie] = useState([]); 
+    
+    var preview;
+    preview = Game1; 
 
     useEffect(() => {
         async function loadGames (){
             const response = await api.get('/games', { highlight : "yes" }); 
 
-            setHighlightGames(response.data);                
-            console.log(highlightGames); 
-            console.log(response.data); 
-        }
+            setHighlightGames(response.data);               
+            
+            
+        }   
+        
         loadGames();
     }, []); 
 
-    console.log('tsete' );
+    
+    async function loadCategories(categorieName) {        
 
-function textAnimationIn() {
-    Anime({
+        console.log(catgs); 
+        const response = await api.post('/gamesCtg', { catgs }); 
+        categorieName(response.data); 
+        
+            
+    }
+    
+    
+
+    function textAnimationIn() {
+        Anime({
         targets: '.middleText',
         opacity: '1',
         translateX: 50,
@@ -37,9 +54,14 @@ function textAnimationIn() {
     });
 }
 
+setInterval(() => {
+    textAnimationOut(); 
+}, 5000);
+
 function textAnimationOut() {
     Anime({
         targets: '.middleText',
+        translateX: -50, 
         opacity: '0'
     });
     Anime({
@@ -48,26 +70,26 @@ function textAnimationOut() {
     });
 }
 
-var game = {
-    thubmnail : Game1, 
-    title : 'Forza Horizon 4',
-    text : ' Texto do jogo vai ter que ocupar o maximo possivel sem quebrar as imagens vamos ver se quebra não tá quebrando legal, então tá tudo certo vamos encher mais e ver até onde vai, será que no fim vai quebrar o espaço da div? Eu espero que não, ainda to colocando mais textos, caralho cabe texto pra porra Não da nem pra acreditar slc eu pensei que ia ficar pequeno  Bom acho que vai caber tudo e mais  Mais uma linha  mais outra  A ultima eu acho  Essa vai quebrar a div  tá essa vai  porra essa, essa quebrou uhu, veja o tamanho da imagem tá esticando  interessante',
-    price : '150,00'
+function changePreview(id){
+    preview = id;     
+    var bigImage = document.querySelector('.slide'); 
+    var gameName = document.querySelector('.text'); 
+    var gameTitle = document.querySelector('#highlightTile'); 
+    var gameDesc = document.querySelector('.highlightDesc span'); 
+    var gamePrice = document.querySelector('#valor'); 
+    gameName.innerHTML = preview.name; 
+    gameTitle.innerHTML = preview.name; 
+    bigImage.src = preview.thumbnail_url;
+    gameDesc.innerHTML = preview.desc; 
+    gamePrice.innerHTML = "R$ "+ preview.price + ",00";  
 }
-/*
-function changeSlide(){
-    var highlightThumbnail = document.querySelector ('.slide');     
-    var highlightTitle = document.querySelector('#highlightTile');  
-    var highlightSpan = document.querySelector ('.text')
-    var highlightText = document.querySelector ('.highlightDesc span')
-    var highlightPrice = document.querySelector('#valor'); 
-    highlightThumbnail.src = game.thumbnail; 
-    highlightTitle.innerHTML = game.title;  
-    highlightSpan.innerHTML = game.title;   
-    highlightText.innerHTML = game.text;   
-    highlightPrice.innerHTML = 'R$ ' + game.price; 
-}
-*/
+
+preview = Game1; 
+
+
+
+
+
     return (        
 
 
@@ -76,10 +98,10 @@ function changeSlide(){
                 <div className="topContainer">
                     <div className="highlights-games">
                         <div className="content" onMouseOver={textAnimationIn} onMouseOut={textAnimationOut}>
-                            <img src={game.thubmnail} alt="" className="slide" />
-                        
+                            
+                            <img src={preview} alt="" className="slide"/>
                             <div className="middleText">
-                                <div className="text"> {game.title} </div>
+                                <div className="text">  </div>
                             </div>
                         </div>
 
@@ -87,19 +109,77 @@ function changeSlide(){
                             <div className="preview">
                                 <ul>
                                     {highlightGames.map(highlight => (
-                                        <li key={highlight._id}>
-                                            <img src={highlight.thubmnail} alt=""/>
+                                        <li key={highlight._id} onMouseOver={changeSlide => {                                            
+                                            preview = highlight;
+                                            changePreview(highlight);
+                                            textAnimationIn(); 
+
+                                            
+                                        }}>
+                                            <img src={highlight.thumbnail_url}  alt=""/>
                                         </li>
                                     ))}
                                 </ul>
                                 
                                 
-                            </div>   
+                            </div>  
+
+                            <div className="highlightDesc">
+                                <h1 id="highlightTile"> FORZA HORIZON 4 </h1>
+                                <span >
+                                    <p> Aqui tem um texto bem loco </p>
+                                    <p> aqui tem mais outro </p>
+
+                                </span>
+
+                                <h1 id="valor" > R$  </h1>
+
+                                <div className="buttonArea">
+                                    <div></div>
+                                    <button type="submit"> favoritar </button>
+                                    <button type="submit"> adicionar ao carrinho</button>
+                                </div>
+                            </div> 
 
                         </div>
                     </div>
                 </div>
+                
+                    
+
+                <div className="categories">
+                    <h1 className="categorieTitle" 
+                        onMouseMove= { event => {                            
+                            setCatgs('Assassinato'); 
+                            loadCategories(setActionCategorie); 
+                    }} > Ação </h1>                                            
+                    <ul>
+                        {actionCategorie.map(categorie => (
+                            <li key={categorie._id}>
+                                <img src={categorie.thumbnail_url} alt="" />
+                            </li>
+                            
+                        ))}
+                    </ul>
+                    <h1 className="categorieTitle"
+                        onWheel={event => {
+                            setCatgs('Corrida');
+                            loadCategories(setRaceCategorie);
+                        }} > corrida </h1>      
+                    <ul>
+                        {raceCategorie.map(categorie => (
+                            <li key={categorie._id}>
+                                <img src={categorie.thumbnail_url} alt="" />
+                            </li>
+
+                        ))}
+                    </ul>   
+
+                </div>
+                
             </div>
         </>
     );
+
+    
 };
