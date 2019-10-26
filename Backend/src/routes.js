@@ -2,10 +2,10 @@ const express = require ('express');
 const multer = require('multer'); 
 const uploadConfig = require('./config/upload');
 
-const GameController = require('./controller/GameController');
 
 const CreateAccountController = require('./controller/CreateAccountController');
 const LoginController = require('./controller/LoginController');
+const GameController = require('./controller/GameController');
 const GameCategories = require('./controller/GameCategories'); 
 
 const routes = express.Router(); 

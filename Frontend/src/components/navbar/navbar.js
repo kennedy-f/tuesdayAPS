@@ -18,7 +18,7 @@ export default props => {
                     <li> <a href="/"> Home </a> </li>
                     <li> <a href="/login"> Minha conta </a> </li>
                     <li> <a href="/biblioteca"> Biblioteca </a> </li>
-                    <li> <a href="" onClick={removeUser}> Logout </a> </li>
+                    <li> <a href="/" onClick={removeUser}> Logout </a> </li>
                 </ul>
             </div>
 

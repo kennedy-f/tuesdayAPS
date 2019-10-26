@@ -24,8 +24,7 @@ module.exports = {
         const highlightGame = await Game.find({highlight : true});
 
         return res.json(highlightGame);
-    },
-
+    }
     
     
 };

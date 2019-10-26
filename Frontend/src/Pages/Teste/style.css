@@ -164,3 +164,8 @@
 
 /*Daqui pra frente só as categorias/tags */ 
 
+
+.categoryImage img{
+  width: 300px;
+
+}
