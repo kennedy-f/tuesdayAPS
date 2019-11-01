@@ -146,13 +146,20 @@ h2 {
     height: 100%;            
 }
 
-#wrongPassword {
-    color: #f15c5c; 
+.createAccount .wrongCamp  {
     display: none;
+    color: #f15c5c;     
+    
 }
 
 .loginStatus{
-    color: #ff0000;  
+    color:#f15c5c;  
+    text-shadow: 1px 1px 10px;    
+    display: none;
+}
+.createAccount label {
+    
+    color: #f15c5c;
     text-shadow: 1px 1px 10px;    
     display: none;
 }

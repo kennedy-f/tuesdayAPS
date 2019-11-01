@@ -1,12 +1,13 @@
 const Game = require('../model/Game'); 
 
 module.exports = { 
-    async show(req, res){        
-        const { catgs } = req.body;
+    async index(req, res){        
+        const { catg } = req.query;
 
-        const games = await Game.find({ catgs });
-
+        const games = await Game.find({ catgs: catg });
+        
+        
         return res.json(games);
         
-    }
+    }    
 }

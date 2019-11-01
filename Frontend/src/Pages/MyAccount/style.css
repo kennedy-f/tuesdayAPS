@@ -1,0 +1,9 @@
+#myAccount{
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#myAccount h1{
+    color: white;
+}

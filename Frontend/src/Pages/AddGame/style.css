@@ -1,0 +1,182 @@
+#addGamePage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; 
+    max-width: 100%;
+    max-height: 100%;
+}
+#addGamePage .container_login {
+    display: flex;    
+    align-self: center;
+    padding-top: 10%;    
+}
+
+#addGamePage .content_box{
+    align-self: center;    
+    display: flex; 
+    flex-direction: row;     
+    border: #95f726 solid 1px;
+    box-shadow: 1px 1px 10px;   
+}
+
+.addGame{
+    display: flex; 
+    flex-direction: column; 
+    margin: 0px 50px; 
+    margin-top: 5%;
+
+}
+.addGame form {
+    display: flex; 
+    flex-direction: column; 
+    margin: 0px 50px; 
+    margin-top: 5%;
+
+}
+.addGame span {
+    color: #95f726;
+    text-shadow: 1px 1px 10px;
+
+}
+.addGame h3{
+    color:#95f726; 
+    text-align: center;
+    text-shadow: 1px 1px 5px;
+} 
+
+.addGame  input {
+    margin-top: 5px;
+
+}
+
+
+.login input {
+    margin-top: 5px;
+}
+h2 {
+     align-self: center;
+     color: white;
+     margin: 10px 0px;
+}
+.addGame .confirmation_btn{
+    align-self: center;
+    color: white;
+    margin-top: 10px;
+    width: 100%; 
+    height: 40px;            
+    display: flex;
+    background-color: #303030;
+    border:#3a3a3a solid 1px; 
+    margin-bottom: 20px;
+}
+
+.addGame .confirmation_btn:hover{
+    cursor: pointer;
+    background-color: #3a3a3a;
+    border:#95f726 solid 1px; 
+    color: #95f726;
+    text-shadow: 1px 1px 10px;
+}
+
+.button_text{    
+    font-size: 1em;       
+    width: 100%;
+    height: 100%;            
+}
+
+.addGame input{
+    background-color: #353535;
+    font-style: oblique;
+    border: #303030 ;
+    color: white;
+    height: 30px;
+    margin-bottom: 10px;       
+    
+}
+.addGame input::placeholder{
+    color: #bebebe;
+}
+
+.addGame label {
+    color: #95f726;
+}
+
+.addGame textarea {
+    max-width: 500px;
+    min-width: 440px; 
+    min-height: 190px;
+    max-height: 200px;
+       
+    
+    width: 440px ;
+    height: 190px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #303030;
+    border-color: #757474;
+    font-family: Roboto;
+}
+
+.addGame select {
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    background-color: #303030;
+    color: #bebebe;
+    border: #757474;
+}
+
+#requisitos {
+    max-width: 500px;
+    min-width: 440px; 
+    min-height: 90px;
+    max-height: 100px;
+       
+    
+    width: 440px ;
+    height: 190px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #303030;
+    border-color: #757474;
+    font-family: Roboto;
+
+}
+label#thumbnail{
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    height: 160px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label#thumbnail input{
+    display: none;
+} 
+
+label#thumbnail.has-thumbnail{
+    border: 0;    
+}
+
+label#thumbnail.has-thumbnail img{
+    display: none;
+}
+
+#highlightForm {
+    width: 100%;
+    height: 100%;
+}
+
+#highlightForm input{
+    background-color: black;
+    color: #95f726;
+}

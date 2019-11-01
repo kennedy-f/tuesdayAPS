@@ -1,6 +1,6 @@
 #header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 50px;
     width: 100%;
     background-color: #222222d0;
@@ -24,4 +24,25 @@ a {
 a:hover { 
     color: #bebebe;       
     text-decoration: none;
+}
+#userLogged{
+    float: right;
+    align-content: flex-end;
+    align-self: flex-end;
+    text-align: right;
+}
+.sacola {  
+  font-size: 14px;
+  padding-right: 35px;
+  padding-top: 8px;
+  text-align:    right;
+  width: 140px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#header span{
+    text-align: end;
+    color: #95f726;
+   
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; 
+import React, {useState, useEffect} from 'react'; 
 import './style.css';
 import api from '../../services/api';
 
@@ -11,7 +11,30 @@ export default function ({history})  {
     const [createPassword, setCreatePasword ] = useState(''); 
     const [testPassword, setTestPassword ] = useState(''); 
 
+    var isCompleted = 0; 
 
+    useEffect (() => {
+        if (createusername === '' && email !== ''){
+            document.querySelector('#nameLabel').style.display = 'initial'; 
+            isCompleted--; 
+        } else {
+            document.querySelector('#nameLabel').style.display = 'none';
+            isCompleted++;              
+        }
+        if (email === '' && testPassword !== '') {
+             document.querySelector('#emailLabel').style.display = 'initial'; 
+             isCompleted--; 
+        } else {
+            document.querySelector('#emailLabel').style.display = 'none'; 
+            isCompleted++; 
+        }
+        
+    })
+
+
+    if (localStorage.getItem('username')){        
+        history.push('/myAccount') 
+    }
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -20,52 +43,64 @@ export default function ({history})  {
         const response = await api.post('/userLogin', { username, password});
         
         var userInput = document.querySelector('#userNotFound') ; 
-        var passInput = document.querySelector('#wrongPassLogin') ; 
-        
+        var passInput = document.querySelector('#wrongPassLogin') ;         
 
-            if (response.data == null ){
-                console.log('usuario não existe \n response.data = ' + response.data); 
-            } else{                
-                const { _id } = response.data ;       
+        if (response.data == null ){
+            console.log('usuario não existe \n response.data = ' + response.data); 
+        } else{                
+            const { _id } = response.data ;       
                 
-                localStorage.setItem('user', _id);
-                if (username === ''){
-                    console.log('usuario vazio'); 
+                
+            if (username === ''){
+                console.log('usuario vazio'); 
                     
-                } else if (response.data.erro === 'UserDontExist'){
-                    console.log('usuario não encontrado')
-                    userInput.style.display = 'initial';                    
+            } else if (response.data.erro === 'UserDontExist'){
+                console.log('usuario não encontrado')
+                userInput.style.display = 'initial';                    
 
-                } else if (password === '') {
-                    console.log('senha vazia')
-                } else if (response.data.erro === 'wrongPassword') {
-                    console.log('senha errada')
-                    passInput.style.display = 'initial'; 
-                } else {
-                    history.push('/');
-                }        
-            }     
+            } else if (password === '') {
+                console.log('senha vazia')
+            } else if (response.data.erro === 'wrongPassword') {
+                console.log('senha errada')
+                passInput.style.display = 'initial'; 
+            } else {     
+                localStorage.setItem('user', _id);
+                localStorage.setItem('username', username);    
+                window.location.reload();
+                setTimeout(() => {
+                history.push('/') 
+                }, 1000)
+                    
+                    
+            }        
+        }     
 
     }
+
+    useEffect(() => {
+
+    })
 
     function checkPassword(){
         var a = document.querySelector('#createPassword')
         var b = document.querySelector('#passwordConfirm')
-        const span = document.querySelector('#wrongPassword'); 
-        if ( a.value !== '' && b.value !== ''){
-            var enableButton = document.querySelector('#createButton'); 
-            
-            if (a.value === b.value){                
-                enableButton.removeAttribute('disabled'); 
-                console.log('senhas iguais')
-                span.style.display = "none";
-                
-            } else {                
-                enableButton.setAttribute('disabled','true'); 
-                span.style.display = 'initial';
-                console.log('senha erradas')
+
+        var enableButton = document.querySelector('#createButton');
+        const span3 = document.querySelector('#wrongPassword'); 
+
+       if (a.value !== '' && b.value !== '' && isCompleted !== 0){            
+            if (a.value === b.value  ){
+                enableButton.removeAttribute('disabled');
+                span3.style.display = "none";
+            } else {
+                enableButton.setAttribute('disabled', 'true');
+                span3.style.display = 'initial'; 
             }
+        } else {
+            enableButton.setAttribute('disabled', 'true');
+            
         }
+       
     }
 
     async function handleCreate(event) {
@@ -76,16 +111,12 @@ export default function ({history})  {
 
         const { _id } = response.data; 
         localStorage.setItem('user', _id); 
+        localStorage.setItem('user', username); 
 
         setTimeout(() => {
             history.push('/');
         }, 2000); 
-        
-
-        
     }
-
-    
 
     return (
 
@@ -100,6 +131,7 @@ export default function ({history})  {
                 <div className="content_box">
                     <div className="login">
                         <form onSubmit={handleSubmit}>
+                            
                                 <label htmlFor="username"> Nome de Usuario  </label>
                                 <input 
                                     type="text" 
@@ -132,13 +164,15 @@ export default function ({history})  {
                     <div className="createAccount">
                         
                         <h3> Ainda não é cadastrado </h3>
-                            <span id="create_acount">  Crie sua conta  </span>
+                        <span id="create_acount">  Crie sua conta  </span>
                             <form onSubmit={handleCreate}>                     
-                                <input type="text" placeholder="Nome de Usuario" value={createusername} onChange={event => setCreateUsername(event.target.value)}/>
-                                <input type="email" placeholder="Email" value={email} onChange={event => setEmail(event.target.value)}/>                        
+                                <label htmlFor="createUserLogin" id="nameLabel"> Campo obrigátorio * </label>
+                                <input id="createUserLogin"type="text" placeholder="Nome de Usuario" value={createusername} onChange={event => setCreateUsername(event.target.value)}/>
+                                <label htmlFor="createEmail" id="emailLabel"> Campo obrigátorio * </label>
+                                <input id="createEmail"type="email" placeholder="Email" value={email} onChange={event => setEmail(event.target.value)}/>                        
                                 <input id="createPassword" type="password" placeholder="Senha" value={testPassword} onChange={event => setTestPassword(event.target.value)} />
                                 <input id="passwordConfirm" type="password" placeholder="Confirme a senha" value={createPassword} onChange={event => setCreatePasword(event.target.value)} onMouseOver={checkPassword}/>
-                                <span id="wrongPassword" > as senha não coincidem </span>
+                                <span id="wrongPassword" className="wrongCamp"> as senha não coincidem </span>
                                 <button id="createButton"type="submit" className="confirmation_btn" disabled>
                                     <span className="button_text"> Crie sua conta</span>
                                 </button>
@@ -153,16 +187,3 @@ export default function ({history})  {
 
     );
 }
-
-/*
-   <h2> ou </h2>
-
-                <button id="facebook_btn">
-                    <img src={Facebook_logo} alt="facebook_login" id="facebook_icon" />
-                    <span> faça login pelo <strong> facebook </strong></span>
-                </button>
-                <button id="facebook_btn">
-                    <img src={Google_logo} alt="facebook_login" id="facebook_icon" />
-                    <span> faça login pelo <strong> Google </strong></span>
-                </button>
-*/

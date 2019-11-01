@@ -2,20 +2,22 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './Pages/Home'; 
-import Teste from './Pages/Teste'; 
-import Game from './Pages/Games'; 
 import Login from './Pages/Login'; 
 import Biblioteca from './Pages/GameLib'; 
+import AddGame from './Pages/AddGame'; 
+import MinhaConta from './Pages/MyAccount'; 
 
 export default function Routes (){
     return (
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Home}/>
-                <Route path="/Games123" component={Game} />
                 <Route path="/login" component={Login}/>
-                <Route path="/biblioteca" component={Biblioteca} />                
-                <Route path="/teste" component={Teste} />                
+                <Route path="/biblioteca" component={Biblioteca} />                                        
+                <Route path="/addGame" component={AddGame} />         
+                <Route path="/minhaConta" component={MinhaConta} />         
+                
+                       
             </Switch>
         </BrowserRouter>
     )

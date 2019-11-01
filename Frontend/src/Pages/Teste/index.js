@@ -7,7 +7,7 @@ import './style.css';
 
 import Game1 from '../../../src/assets/CapaForzaHorizon4Wivernz@2x.png'
 //import Game2 from '../../../src/assets/FundoAssassinsCreedUnityGoldEditionELAMIGOSWivernz@2x.png'
-import Categories from '../../components/categories/categories'
+
 
 
 export default function Teste() {
