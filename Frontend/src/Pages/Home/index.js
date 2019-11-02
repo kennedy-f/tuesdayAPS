@@ -31,7 +31,7 @@ export default function Home() {
 
     function textAnimationIn() {
         Anime({
-            targets: '.middleText',
+            targets: '.middleText_highlight',
             opacity: '1',
             translateX: 50,
             duration: 3000,
@@ -45,7 +45,7 @@ export default function Home() {
 
     function textAnimationOut() {
         Anime({
-            targets: '.middleText',
+            targets: '.middleText_highlight',
             translateX: -50,
             opacity: '0'
         });
@@ -58,7 +58,7 @@ export default function Home() {
     function changePreview(id) {
         preview = id;
         var bigImage = document.querySelector('.slide');
-        var gameName = document.querySelector('.text');
+        var gameName = document.querySelector('.text_highlight');
         var gameTitle = document.querySelector('#highlightTile');
         var gameDesc = document.querySelector('.highlightDesc span');
         var gamePrice = document.querySelector('#valor');
@@ -81,8 +81,8 @@ export default function Home() {
                         <div className="content" onMouseOver={textAnimationIn} onMouseOut={textAnimationOut}>
 
                             <img src={preview} alt="" className="slide" />
-                            <div className="middleText">
-                                <div className="text">  </div>
+                            <div className="middleText_highlight">
+                                <div className="text_highlight"> teste</div>
                             </div>
                         </div>
 
