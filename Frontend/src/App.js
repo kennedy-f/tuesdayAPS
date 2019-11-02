@@ -12,7 +12,7 @@ function App() {
   return (
 
     <>     
-      <div className="navbar">
+      <div className="my_navbar">
         <Navbar />                
       </div>
       <div className="page"></div>

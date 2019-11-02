@@ -1,5 +1,11 @@
-.categories {
-    margin-top: 2%;
-    
+.categories_container {
+    margin-top: 2%;    
     width: 100%;
+}
+.categories img {
+    z-index: -1;
+    width: 350px;
+}
+.categories h1 {
+    color: white;
 }

@@ -1,30 +1,36 @@
-#header {
+#header {    
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: 80px;
     width: 100%;
     background-color: #222222d0;
     position: fixed;    
+    z-index: 1000;
 }
+
 #header ul {
+    margin-top: 20px;    
     display: flex;
     flex-direction: row;    
     align-self: center;    
 }
+
 #header ul li {
     list-style: none;
     margin-left: 50px;
-    margin-top: 14px;
-    
+    margin-top: 14px;    
 }
+
 a { 
     color: #95f726;       
     text-decoration: none;
 }
+
 a:hover { 
     color: #bebebe;       
     text-decoration: none;
 }
+
 #userLogged{
     float: right;
     align-content: flex-end;
@@ -41,8 +47,9 @@ a:hover {
   top: 0;
   right: 0;
 }
+
 #header span{
+    margin-top: 20px;
     text-align: end;
-    color: #95f726;
-   
+    color: #95f726;   
 }

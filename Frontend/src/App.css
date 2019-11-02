@@ -27,11 +27,12 @@ body, input, button, a {
   font-size: 14px;  
 }
 
-.navbar{
-  z-index: 9;  
+.my_navbar{
+  position: fixed;  
+  z-index: 2;
 }
 .Page{
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
 }
 .page{
@@ -40,3 +41,4 @@ body, input, button, a {
 #footer{         
   margin-top:calc(3% + 4px);
 }
+
