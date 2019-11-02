@@ -46,6 +46,7 @@ Instalar o YARN é o que eu uso muita das vezes no lugar do NPM.
 # Obrigatório: 
 
 <b> 1- Ter instalado na sua maquina o nodeJS, só seguir qql tuturial na web. </b>
+<b> 2- Instalar o Frontend, abra a pasta /Frontenda abra o terminal nela e digite 'yarn install' </b> 
 
 # OBS
 
