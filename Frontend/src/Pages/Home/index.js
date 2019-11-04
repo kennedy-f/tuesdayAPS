@@ -57,16 +57,18 @@ export default function Home() {
 
     function changePreview(id) {
         preview = id;
-        var bigImage = document.querySelector('.slide');
+        var bigImage = document.querySelector('#bigSlide');
         var gameName = document.querySelector('.text_highlight');
         var gameTitle = document.querySelector('#highlightTile');
         var gameDesc = document.querySelector('.highlightDesc span');
         var gamePrice = document.querySelector('#valor');
+        var gameLink = document.querySelector('#gameLink')
         gameName.innerHTML = preview.name;
         gameTitle.innerHTML = preview.name;
         bigImage.src = preview.thumbnail_url;
         gameDesc.innerHTML = preview.desc;
         gamePrice.innerHTML = "R$ " + preview.price + ",00";
+        gameLink.href = '/game?_id=' + preview.id;
     }
 
     preview = Game1;
@@ -79,8 +81,9 @@ export default function Home() {
                 <div className="topContainer">
                     <div className="highlights-games">
                         <div className="content" onMouseOver={textAnimationIn} onMouseOut={textAnimationOut}>
-
-                            <img src={preview} alt="" className="slide" />
+                            <a href='/' id="gameLink">
+                                <img src={preview} alt="" className="slide" id="bigSlide"/>
+                            </a>                            
                             <div className="middleText_highlight">
                                 <div className="text_highlight"> teste</div>
                             </div>

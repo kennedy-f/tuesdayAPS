@@ -19,7 +19,7 @@
 }
 
 .topContainer .highlights-games .slide {       
-  width: 100%;
+  width: 880px;
   max-height: 100%;
   max-width: 1100px;
   cursor: pointer;
@@ -27,8 +27,10 @@
 .topContainer .highlights-games .content .preview  {
   display: flex;  
   flex-direction: row;
-  max-height: 100%;
-  max-width: 710,9px;
+  max-height: 80%;
+  min-height: 10px;  
+  max-width: 200px;  
+  cursor: pointer;
 }
 .slide:hover{
   opacity: 0.6;
@@ -54,6 +56,7 @@
   display: flex;  
   max-width: 100%;
   max-height: 589px;
+  width: 100%;
 }
 .slide {
   width: 1100px;
@@ -64,18 +67,10 @@
   max-width: 100%;
   height: 100%;
 }
-.topContainer .highlights-games .content .preview {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  max-height: 100%;
-  cursor: pointer;
-}
-
 .topContainer .highlights-games .content .preview ul {
   max-width: 100%;
   margin: 0px 0px 0px 1%; 
-  max-height: 100%;
+  max-height: 80%;  
 }
 
 .topContainer .highlights-games .content .preview ul li {
@@ -83,8 +78,9 @@
 }
 
 .topContainer .highlights-games .content .preview ul li img {
-  max-width: 100%;
-  max-height: 160px;
+  max-width: 100%;  
+  max-height: 160px;  
+  min-height: 113,1px;
 }
 
 .topContainer .highlights-games .content .preview ul li img:hover {
@@ -114,6 +110,7 @@
   text-align: justify;
   font-size: 1.2em;
   overflow: hidden;
+  max-width: 410px;
 }
 
 .highlightDesc #valor {
@@ -164,6 +161,8 @@
   margin-right: 10px;
   font-size: 30px;
 }
-
+#gameLink{
+  width: 100%;
+}
 /*Daqui pra frente só as categorias/tags */ 
 
