@@ -25,6 +25,7 @@ module.exports = {
 
         return res.json(highlightGame);
     }, 
+    
     async index(req, res) {
         const _id = req.query;
 

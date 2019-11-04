@@ -1,3 +1,32 @@
 .gamePage{
     color: white;
+    width: 100%;
+    max-width: 100%;
+}
+
+.gamepage_container {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: auto;    
+}
+
+.gamepage_container img {
+    max-width: 1000px;
+    width: 800px;
+    min-width: 200px;
+}
+.gamepage_content{
+    width: 100%;
+}
+.gamepage_content h1{
+    color: greenyellow;
+    text-align: center;
+
+}
+.gameRequirements{
+    margin-left: 12px;
+    font-family: 'Roboto';   
+    font-weight: 100;  
+    font-style: italic;
 }
