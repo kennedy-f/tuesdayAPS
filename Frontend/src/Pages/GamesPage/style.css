@@ -24,9 +24,33 @@
     text-align: center;
 
 }
+
+.descGame {
+    margin: 0px 10px ;
+}
+
 .gameRequirements{
-    margin-left: 12px;
-    font-family: 'Roboto';   
+    background-color: #242424;
+    border: solid 1px #139901; 
+    box-shadow: 3px 3px 10px black;
+    min-height: 100px;
+    margin: 0px 12px;
+    padding: 5px 10px;
+    
+}
+.gameRequirements h3{
+    text-align: center;
+}
+
+.requirement_container {
+    display: flex;    
+}
+.requirementType{
+    width: 100%;
+}
+
+.gameRequirements p{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;   
     font-weight: 100;  
     font-style: italic;
 }

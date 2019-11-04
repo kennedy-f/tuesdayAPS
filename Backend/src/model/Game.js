@@ -4,7 +4,8 @@ const GameSchema = new mongoose.Schema ({
     thumbnail : String,
     name : String,
     desc: String,    
-    requirements: [String],
+    minReq: [String],
+    recReq: [String],
     catgs : [String],
     price: Number , 
     highlight : String

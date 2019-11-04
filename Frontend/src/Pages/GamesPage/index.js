@@ -8,17 +8,13 @@ import './style.css'
 
 
 export default function (props){
-    
-    const thePageUrl = window.location.href;   
+    const thePageUrl = window.location.href;
 
-    const parsed = qs.parseUrl(thePageUrl); 
+    const parsed = qs.parseUrl(thePageUrl);
 
     const _id = parsed.query; 
-
-    console.log(parsed); 
-
-    console.log(_id);
-
+   
+   
 
 
     
@@ -30,6 +26,7 @@ export default function (props){
     useEffect(() => {
 
         async function getGame(){
+
             const response = await api.get('/game', {params : _id}); 
             setGame(response.data); 
             console.log(response.data);
@@ -37,7 +34,7 @@ export default function (props){
 
         getGame(); 
 
-    }, [thePageUrl])
+    }, []);
 
     
     
@@ -45,18 +42,42 @@ export default function (props){
     return(
         <div className="gamePage">            
             {game.map(games => (
-                <div className="gamepage_container">
+                <div className="gamepage_container" key={games._id}>
                     <div className="game_image">
-                        <img src={games.thumbnail_url} alt="" srcset=""/>
+                        <img src={games.thumbnail_url} alt="" />
                     </div>
                     <div className="gamepage_content">
                         <h1> {games.name} </h1>
 
-                        <p> {games.desc} </p>
-                        <h3> Requisitos </h3>
-                        <div className="gameRequirements">
-                            <p> {games.requirements} </p>
+                        <div className="descGame">
+                            <p> {games.desc} </p>
                         </div>
+
+                        <div className="gameRequirements">
+                            <h3> Requisitos </h3>
+                            <div className="requirement_container">
+                                <div className="requirementType">
+                                    <h5> Minimo </h5>
+                                    {games.minReq.map(requirement => (
+                                        <div  key={requirement}>
+                                            <p> {requirement} </p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="requirementType">
+                                    <h5> Recomendado </h5>
+                                    {games.recReq.map(requirement => (
+                                        
+                                        <div key={requirement}>                                            
+                                            <h4></h4>
+                                            <p> {requirement} </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                            </div>
+                        </div>
+                        
 
                     </div>
                 </div>

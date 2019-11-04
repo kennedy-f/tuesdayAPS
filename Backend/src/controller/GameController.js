@@ -3,13 +3,14 @@ const Game = require('../model/Game');
 module.exports = {   
     async store(req, res){
         const { filename } = req.file; 
-        const { name, desc, requirements, catgs, price, highlight } = req.body;        
+        const { name, desc, minReq, recReq, catgs, price, highlight } = req.body;        
 
         const game = await Game.create({
             thumbnail: filename,
             name,
             desc, 
-            requirements: requirements.split(',').map(requirement => requirement.trim()) ,
+            minReq: minReq.split(',').map(requirement => requirement.trim()) ,
+            recReq: recReq.split(',').map(requirement => requirement.trim()) ,
             catgs: catgs.split(',').map(cats => cats.trim()) ,
             price, 
             highlight
