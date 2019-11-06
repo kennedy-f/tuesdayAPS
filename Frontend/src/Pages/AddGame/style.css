@@ -183,3 +183,18 @@ label#thumbnail.has-thumbnail img{
 .reqContainer textarea{
     margin-left: 10px;
 }
+
+#highlightForm .btn-primary{
+    color: white; 
+    background-color: #303030;
+    border-color: #95f726;
+}
+#highlightForm .active {
+    color: black;
+    background-color: #95f726;
+    border-color: #95f726;
+}
+
+#highlightForm .btn-primary.focus, .btn-primary:focus{
+    box-shadow: 0px 0px 10px 1px #95f726;
+}
