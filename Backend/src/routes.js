@@ -13,12 +13,19 @@ const routes = express.Router();
 const upload = multer(uploadConfig); 
 
 routes.post('/createUser', CreateAccountController.store);
+
 routes.post('/userLogin', LoginController.store);
+//routes.get('/bibliotecaTeste', LoginController.index);
+
 routes.get('/games', GameController.show);
 routes.get('/game', GameController.index);
+
 routes.get('/gamesCtg', GameCategories.index);
+
 routes.get('/GameCart', GameCart.index);
-routes.post('/addGames', upload.single('thumbnail'), GameController.store);
+routes.post('/GameCart', GameCart.store);
+
+routes.store('/addGames', upload.single('thumbnail'), GameController.store);
 
 
 

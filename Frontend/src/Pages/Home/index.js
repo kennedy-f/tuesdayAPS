@@ -100,7 +100,10 @@ export default function Home() {
 
 
                                         }}>
-                                            <img src={highlight.thumbnail_url} alt="" />
+                                            <a href={`game?_id=${highlight._id}`} alt="">
+                                                <img src={highlight.thumbnail_url} alt="" />
+
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>

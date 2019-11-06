@@ -10,7 +10,8 @@ export default function ({history})  {
     const [catgs, setCatgs ] = useState(''); 
     const [desc, setDesc ] = useState('');     
     const [price, setPrice ] = useState(''); 
-    const [requirements, setRequirements] = useState('');
+    const [minRequirement, setMinRequirement] = useState('');
+    const [recRequirement, setRecRequirement] = useState('');
     const [thumbnail, setThumbnail] = useState(null);
     const [highlight, setHighlight] = useState(''); 
 
@@ -25,7 +26,8 @@ export default function ({history})  {
         data.append("name", name);
         data.append('thumbnail',thumbnail);
         data.append('desc', desc);
-        data.append('requirements', requirements);
+        data.append('minReq', minRequirement);
+        data.append('recReq', recRequirement);
         data.append('catgs', catgs);
         data.append('price', price);        
         data.append('highlight', highlight)
@@ -37,6 +39,8 @@ export default function ({history})  {
         //const response = await api.post('/addGames', data);        
         
         console.log('teste2'); 
+        alert('jogo salvo');
+        window.location.reload();
  
     } 
     
@@ -86,12 +90,24 @@ export default function ({history})  {
                                     onChange={event => setDesc(event.target.value)}/> 
 
                                 <label htmlFor="requirements"> Requisitos </label>
-                                <textarea 
-                                    name="requirements" 
-                                    rows="10" cols="40" 
-                                    placeholder="CPU, GPU, Ram, HD..." 
-                                    id="requisitos" value={requirements} 
-                                    onChange={event => setRequirements(event.target.value)}/>
+                                <div className="reqContainer">
+                                    <textarea 
+                                        name="minReq" 
+                                        rows="10" cols="40" 
+                                        placeholder="Requisitos minimos" 
+                                        id="requisitosMin" value={minRequirement} 
+                                        onChange={event => setMinRequirement(event.target.value)}/>
+
+                                    <textarea 
+                                        name="recomReq" 
+                                        rows="10" cols="40" 
+                                        placeholder="Requisitos Recomendados" 
+                                        id="requisitosRec" value={recRequirement} 
+                                        onChange={event => setRecRequirement(event.target.value)}/>
+
+                                </div> 
+
+                                
 
                                 <label htmlFor="price"> Valor </label>
                                 <input 

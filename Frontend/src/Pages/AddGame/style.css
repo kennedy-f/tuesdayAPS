@@ -180,3 +180,6 @@ label#thumbnail.has-thumbnail img{
     background-color: black;
     color: #95f726;
 }
+.reqContainer textarea{
+    margin-left: 10px;
+}

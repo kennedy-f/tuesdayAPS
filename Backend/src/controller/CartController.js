@@ -1,4 +1,5 @@
 const Game = require('../model/Game');
+const User = require('../model/User');
 
 module.exports = {    
     async index(req, res) {
@@ -7,6 +8,13 @@ module.exports = {
         const buyGame = await Game.find({ _id });
 
         return res.json(buyGame);
+    }, 
+    
+    async store(req, res){
+        const _id = req.body; 
+
+        return res.json({ teste: 'salvou'}); 
+
     }
 
 

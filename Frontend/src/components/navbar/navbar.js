@@ -8,10 +8,11 @@ export default props => {
     const [user, setUser] = useState(localStorage.getItem('username')); 
 
     const [pageToload, setPageToLoad] = useState(''); 
+    var notLogged;
 
     useEffect (() => {
         function changePage(){
-            if (user) {
+            if (user && user!== 'Fazer Login') {
                 setPageToLoad('/minhaConta'); 
             }
             else {
@@ -48,7 +49,9 @@ export default props => {
                 <ul className="sacola">
 
                     
-                    <span> <a href={pageToload}> {user} </a> </span>
+                    <span> 
+                        <a href={pageToload} id=""> {notLogged} {user} </a>
+                    </span>
                     
 
                 </ul>

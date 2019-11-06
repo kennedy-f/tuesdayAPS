@@ -64,7 +64,7 @@ export default function ({history})  {
                 console.log('senha errada')
                 passInput.style.display = 'initial'; 
             } else {     
-                localStorage.setItem('user', _id);
+                localStorage.setItem('_id', _id);
                 localStorage.setItem('username', username);    
                 window.location.reload();
                 setTimeout(() => {

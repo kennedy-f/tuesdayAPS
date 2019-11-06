@@ -21,6 +21,13 @@ module.exports = {
 
 
         
+    }, 
+    async index(req, res ){
+        const {_id} = req.body; 
+
+        let user = await User.findOne({ _id }).select('games');
+
+        return res.json(user)
     }
 
 }

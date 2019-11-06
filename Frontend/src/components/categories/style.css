@@ -9,3 +9,6 @@
 .categories h1 {
     color: white;
 }
+.react-multi-carousel-item li {
+    margin-left: 300px;
+}

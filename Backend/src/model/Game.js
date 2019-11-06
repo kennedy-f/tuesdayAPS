@@ -17,7 +17,7 @@ const GameSchema = new mongoose.Schema ({
 });
 
 GameSchema.virtual('thumbnail_url').get(function(){
-    return `http://192.168.0.108:3333/files/${this.thumbnail}`
+    return `http://localhost:3333/files/${this.thumbnail}`
 });
 
 module.exports = mongoose.model('Game', GameSchema); 
