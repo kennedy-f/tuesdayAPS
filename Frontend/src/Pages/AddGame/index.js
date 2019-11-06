@@ -2,7 +2,9 @@ import React, {useState, useMemo } from 'react';
 import './style.css';
 import api from '../../services/api';
 
-import camera from '../../assets/camera.svg'
+import { ButtonToolbar, ToggleButtonGroup , ToggleButton } from 'react-bootstrap';
+
+import camera from '../../assets/camera.svg';
 
 export default function ({history})  {
 
@@ -119,10 +121,18 @@ export default function ({history})  {
                                     onChange={event => setPrice(event.target.value)}/>
                                 <span> Aparecer como destaque na página inicial? </span>
                                 <div id="highlightForm">
-                                    <label htmlFor="highlightTrue"> Sim </label>
-                                    <input type="radio" id="highlightTrue" name="highlight" value="true" onChange={event => setHighlight(event.target.value)} />
-                                    <label htmlFor="highlightFalse"> Não </label>
-                                    <input type="radio" id="highlightFalse" name="highlight" value="false" onChange={event => setHighlight(event.target.value)} />
+
+                                    <ButtonToolbar>
+
+                                        <ToggleButtonGroup type="radio" name="highlightOnOff" defaultValue={false} >
+
+                                            <ToggleButton value={false} onChange={event => setHighlight(event.target.value)}> Não </ToggleButton>
+                                            <ToggleButton value={true} onChange={event => setHighlight(event.target.value)}> Sim </ToggleButton>
+                                            
+                                        </ToggleButtonGroup >
+
+                                    </ButtonToolbar>
+
                                 </div>
                                
                                 
