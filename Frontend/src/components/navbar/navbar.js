@@ -13,7 +13,7 @@ export default props => {
     useEffect (() => {
         function changePage(){
             if (user && user!== 'Fazer Login') {
-                setPageToLoad('/minhaConta'); 
+                setPageToLoad('/biblioteca'); 
             }
             else {
                 setPageToLoad('/login');
@@ -39,9 +39,8 @@ export default props => {
         <>
             <div id="header">
                 <ul >
-                    <li> <a href="/"> Home </a> </li>
-                    <li> <a href={pageToload}> Minha conta </a> </li>
-                    <li> <a href="/biblioteca"> Biblioteca </a> </li>
+                    <li> <a href="/"> Home </a> </li>                    
+                    <li> <a href={pageToload}> Biblioteca </a> </li>
                     <li> <a href="/" onClick={removeUser}> Logout </a> </li>
                     
                     
