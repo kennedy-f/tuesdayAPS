@@ -23,7 +23,7 @@ routes.get('/game', GameController.index);
 routes.get('/gamesCtg', GameCategories.index);
 
 routes.get('/GameCart', GameCart.index);
-routes.post('/GameCart', GameCart.store);
+routes.post('/buygame', GameCart.store);
 
 routes.post('/addGames', upload.single('thumbnail'), GameController.store);
 
