@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react'
+
+import {Button} from 'react-bootstrap'
 import qs from 'query-string'; 
 
 import api from  '../../services/api'; 
@@ -85,7 +87,9 @@ export default function (props){
                 </div>
 
             ))}
-            
+            <Button>
+                Botão de comprar
+            </Button>
         </div>
     )
 }
