@@ -10,22 +10,20 @@ module.exports = {
         return res.json(buyGame);
     }, 
     
-    async store(req, res){
-        const { game} = req.body; 
-        const { _id } = req.headers ; 
+    async store(req, res){        
+        const { _id } = req.headers; 
+        const { game } = req.query; 
         
-        const gameExist = await User.findById({_id}).findOne({ games : game});
-
+        
+        const gameExist = await User.findOne({_id}).findOne({ games : game});
+        
         if (!gameExist){
             const user = await User.updateOne({ _id }, { $push: { upsert: true, games: game}})
             const newUser = await User.findById(_id); 
             return res.json( {user, compra:'compra feita com sucesso'}); 
         }
-
-
-
-        return res.json({teste: 'Jogo já comprado'}); 
-
+        return res.json({jogo: 'já comprado'})
+        
     }
 
 

@@ -14,7 +14,7 @@ module.exports = {
             catgs: catgs.split(',').map(cats => cats.trim()) ,
             price, 
             highlight
-        })
+        })       
 
         return res.json(game);
     },

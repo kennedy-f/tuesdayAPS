@@ -7,6 +7,7 @@ import Biblioteca from './Pages/GameLib';
 import AddGame from './Pages/AddGame'; 
 import MinhaConta from './Pages/MyAccount'; 
 import GamePage from './Pages/GamesPage'; 
+import BuyGame from './Pages/BuyGame'; 
 
 export default function Routes (){
     return (
@@ -18,8 +19,9 @@ export default function Routes (){
                 <Route path="/addGame" component={AddGame} />         
                 <Route path="/minhaConta" component={MinhaConta} />   
                 
-                 
                 <Route path="/game" component={GamePage}/>
+                <Route path="/buygame" component={BuyGame}/>
+                
                 
                        
             </Switch>

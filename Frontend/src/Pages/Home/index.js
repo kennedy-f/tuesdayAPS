@@ -53,8 +53,8 @@ export default function Home() {
             targets: 'text',
             translateX: 0,
         });
-    }
-
+    }    
+    var gameUrl; 
     function changePreview(id) {
         preview = id;
         var bigImage = document.querySelector('#bigSlide');
@@ -68,10 +68,24 @@ export default function Home() {
         bigImage.src = preview.thumbnail_url;
         gameDesc.innerHTML = preview.desc;
         gamePrice.innerHTML = "R$ " + preview.price + ",00";
-        gameLink.href = '/game?_id=' + preview.id;
+        gameLink.href = '/game?_id=' + preview.id; 
+        gameUrl = preview.id;
     }
 
     preview = Game1;
+
+    function buyGameAction(){
+        if (localStorage.getItem('_id')){
+            console.log('usuario logado')
+            window.location = 'buygame?_id=' + gameUrl; 
+        } else {
+            console.log('está off')
+            window.location = '/login';
+        }
+        
+        
+        console.log('função')
+    }
 
 
 
@@ -123,8 +137,8 @@ export default function Home() {
 
                                 <div className="buttonArea">
                                     <div></div>
-                                    <button type="submit"> favoritar </button>
-                                    <button type="submit"> adicionar ao carrinho</button>
+                                    <button type="button" > favoritar </button>
+                                    <button type="button" onClick={buyGameAction}> adicionar ao carrinho</button>
                                 </div>
                             </div>
 

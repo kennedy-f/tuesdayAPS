@@ -57,9 +57,11 @@ export default function Categories({ catg }){
                 showDots={true}
                 >
                 {games.map(game => (
-                    <a href={`game?_id=${game._id}`}>
-                        <img src={game.thumbnail_url} alt=""/>
-                    </a>
+                    <div key={game._id}>
+                        <a href={`game?_id=${game._id}`}>
+                            <img src={game.thumbnail_url} alt=""/>
+                        </a>
+                    </div>
                 ))}
 
             </Carousel>

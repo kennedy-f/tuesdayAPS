@@ -26,7 +26,7 @@ export default props => {
     function removeUser(event){
         event.preventDefault();
 
-        localStorage.removeItem('user');
+        localStorage.removeItem('_id');
         localStorage.removeItem('username');
         alert('deslogado com sucesso')
         window.location.reload();

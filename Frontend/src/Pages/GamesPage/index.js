@@ -14,16 +14,9 @@ export default function (props){
 
     const parsed = qs.parseUrl(thePageUrl);
 
-    const _id = parsed.query; 
-   
-   
-
-
+    const _id = parsed.query;     
     
     const [game, setGame] = useState([]); 
-    
-    
-
 
     useEffect(() => {
 
