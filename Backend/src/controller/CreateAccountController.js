@@ -1,5 +1,6 @@
 // index = mostra tudo, show = mostra um, store = criar, updtate = alter, destroy = deletar destruir
 const User = require('../model/User');
+const Bag = require('../model/Bag');
 
 module.exports = {
     async store(req, res) {
@@ -16,8 +17,22 @@ module.exports = {
             user = await User.create({ 
                 email,
                 username, 
-                password
-            });          
+                password, 
+                bag : null
+            }); 
+
+            const userBag = await Bag.create({
+                id_user : user._id
+            }); 
+            await userBag.populate('id_game').execPopulate(); 
+            const atualizarUser = await User.updateOne({_id: user._id }, { $set: { bag: userBag._id } })
+
+            const finalUser = await User.findById(user._id);
+            return res.json(finalUser);
+            
+           
+
+            
         }
 
         

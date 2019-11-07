@@ -1,28 +1,23 @@
-const Game = require('../model/Game');
-const User = require('../model/User');
+const Bag = require('../model/Bag'); 
 
-module.exports = {    
-    async index(req, res) {
-        const _id = req.query;
-
-        const buyGame = await Game.find({ _id });
-
-        return res.json(buyGame);
-    }, 
+module.exports = {      
     
     async store(req, res){        
-        const { _id } = req.headers; 
+        const { _id, bag_id } = req.headers; 
         const { game } = req.query; 
-        
-        
-        const gameExist = await User.findOne({_id}).findOne({ games : game});
+
+        const gameExist = await Bag.findOne({ id_user: _id}).findOne({ id_game : game});
+        const bag = await Bag.find({ id_user: _id}); 
         
         if (!gameExist){
-            const user = await User.updateOne({ _id }, { $push: { upsert: true, games: game}})
-            const newUser = await User.findById(_id); 
-            return res.json( {user, compra:'compra feita com sucesso'}); 
+            const upBag = await Bag.updateOne({ _id: bag_id }, { $push: { upsert: true, id_game: game } })
+            const finalBag = await Bag.findOne({ id_user: _id }).populate('id_game');            
+
+            return res.json(finalBag); 
         }
-        return res.json({jogo: 'já comprado'})
+        const finalBag = await Bag.findOne({ id_user: _id }).populate('id_game');    
+
+        return res.json(finalBag); 
         
     }
 

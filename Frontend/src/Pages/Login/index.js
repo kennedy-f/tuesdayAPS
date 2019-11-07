@@ -33,7 +33,7 @@ export default function ({history})  {
 
 
     if (localStorage.getItem('username')){        
-        history.push('/myAccount') 
+        window.history.back(); 
     }
 
     async function handleSubmit(event) {
@@ -48,8 +48,7 @@ export default function ({history})  {
         if (response.data == null ){
             console.log('usuario não existe \n response.data = ' + response.data); 
         } else{                
-            const { _id } = response.data ;       
-                
+            const { _id, bag } = response.data ;       
                 
             if (username === ''){
                 console.log('usuario vazio'); 
@@ -66,6 +65,7 @@ export default function ({history})  {
             } else {     
                 localStorage.setItem('_id', _id);
                 localStorage.setItem('username', username);    
+                localStorage.setItem('bag_id', bag);
                 window.location.reload();
                 setTimeout(() => {
                 history.push('/') 
@@ -110,8 +110,10 @@ export default function ({history})  {
         alert('Conta criada com sucesso')
 
         const { _id } = response.data; 
+        const { bag } = response.data;
         localStorage.setItem('user', _id); 
         localStorage.setItem('user', username); 
+        localStorage.setItem('lib_id', bag );
 
         setTimeout(() => {
             history.push('/');

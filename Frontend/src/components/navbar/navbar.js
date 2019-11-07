@@ -28,6 +28,7 @@ export default props => {
 
         localStorage.removeItem('_id');
         localStorage.removeItem('username');
+        localStorage.removeItem('bag_id'); 
         alert('deslogado com sucesso')
         window.location.reload();
         
@@ -41,7 +42,6 @@ export default props => {
                 <ul >
                     <li> <a href="/"> Home </a> </li>                    
                     <li> <a href={pageToload}> Biblioteca </a> </li>
-                    <li> <a href="/" onClick={removeUser}> Logout </a> </li>
                     
                     
                 </ul>               
@@ -49,10 +49,11 @@ export default props => {
 
                     
                     <span> 
-                        <a href={pageToload} id=""> {notLogged} {user} </a>
-                    </span>
-                    
-
+                        <a href={pageToload} id=""> {notLogged} {user} </a>                        
+                    </span>                    
+                    <li>                    
+                        <a href="/" onClick={removeUser}> Logout </a>                    
+                    </li>
                 </ul>
                 
             </div>

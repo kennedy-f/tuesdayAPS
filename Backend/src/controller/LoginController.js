@@ -1,4 +1,6 @@
+// index = mostra tudo, show = mostra um, store = criar, updtate = alter, destroy = deletar destruir
 const User = require('../model/User');
+
 
 module.exports = {
     
@@ -22,8 +24,9 @@ module.exports = {
 
         
     }, 
+    
     async index(req, res ){
-        const {_id} = req.body; 
+        const { _id } = req.body;
 
         let user = await User.findOne({ _id }).select('games');
 

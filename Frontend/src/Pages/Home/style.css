@@ -164,7 +164,9 @@
 #gameLink{
   width: 100%;
 }
-
-
-/*Daqui pra frente só as categorias/tags */ 
-
+#buyButton{
+  min-width: 25%;
+  width: 300px;
+  font-size: 20px;
+  height: 50px;
+}

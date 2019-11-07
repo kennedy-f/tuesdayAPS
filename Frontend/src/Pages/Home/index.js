@@ -136,9 +136,8 @@ export default function Home() {
                                 <h1 id="valor" > R$  </h1>
 
                                 <div className="buttonArea">
-                                    <div></div>
-                                    <button type="button" > favoritar </button>
-                                    <button type="button" onClick={buyGameAction}> adicionar ao carrinho</button>
+                                    <div></div>                                    
+                                    <button type="button" id="buyButton"onClick={buyGameAction}> Comprar </button>
                                 </div>
                             </div>
 

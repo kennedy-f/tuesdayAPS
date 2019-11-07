@@ -80,7 +80,7 @@ export default function (props){
                 </div>
 
             ))}
-            <Button>
+            <Button >
                 Botão de comprar
             </Button>
         </div>
