@@ -28,7 +28,8 @@ export default props => {
 
         localStorage.removeItem('_id');
         localStorage.removeItem('username');
-        localStorage.removeItem('bag_id'); 
+        localStorage.removeItem('lib_id'); 
+
         alert('deslogado com sucesso')
         window.location.reload();
         

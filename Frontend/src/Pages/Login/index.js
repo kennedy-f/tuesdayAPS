@@ -110,14 +110,16 @@ export default function ({history})  {
         alert('Conta criada com sucesso')
 
         const { _id } = response.data; 
+        console.log(_id); 
         const { bag } = response.data;
-        localStorage.setItem('user', _id); 
-        localStorage.setItem('user', username); 
+        console.log(bag); 
+        localStorage.setItem('_id', _id); 
+        localStorage.setItem('username', createusername); 
         localStorage.setItem('lib_id', bag );
 
         setTimeout(() => {
-            history.push('/');
-        }, 2000); 
+            window.location.href = '/';
+        }, 1000); 
     }
 
     return (
