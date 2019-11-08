@@ -39,17 +39,21 @@ a:hover {
 }
 .sacola {  
   font-size: 14px;
-  padding-right: 35px;
-  padding-top: 8px;
-  text-align:    right;
-  width: 140px;
+  padding-right: 0px;
+  padding-top: 0px;
+  text-align: right;
+  width: 150px;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-#header span{
-    margin-top: 5px;    
+.sacola div {
+    margin-left: 10px;
+}
+
+#header span{      
     text-align: end;
-    color: #95f726;   
+    color: #95f726; 
+    
 }

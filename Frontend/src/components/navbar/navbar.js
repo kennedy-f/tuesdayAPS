@@ -47,13 +47,15 @@ export default props => {
                 </ul>               
                 <ul className="sacola">
 
-                    
-                    <span> 
+                    <div>
                         <a href={pageToload} id=""> {notLogged} {user} </a>                        
-                    </span>                    
-                    <li>                    
-                        <a href="/" onClick={removeUser}> Logout </a>                    
-                    </li>
+                    </div>
+                    
+                    <div>
+                        <a href="/" onClick={removeUser}> Logout </a>                                            
+                    </div>     
+                                  
+                    
                 </ul>
                 
             </div>
