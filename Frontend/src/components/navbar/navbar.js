@@ -17,7 +17,7 @@ export default props => {
             }
             else {
                 setPageToLoad('/login');
-                setUser('Fazer Login');
+                setUser('Entrar');
             }
         }
         changePage();
@@ -39,12 +39,12 @@ export default props => {
     return (
         <>
             <div id="header">
+
                 <ul >
                     <li> <a href="/"> Home </a> </li>                    
-                    <li> <a href={pageToload}> Biblioteca </a> </li>
-                    
-                    
+                    <li> <a href={pageToload}> Biblioteca </a> </li>                    
                 </ul>               
+
                 <ul className="sacola">
 
                     <div>
@@ -52,12 +52,11 @@ export default props => {
                     </div>
                     
                     <div>
-                        <a href="/" onClick={removeUser}> Logout </a>                                            
+                        <a href="/" onClick={removeUser}> Sair </a>                                            
                     </div>     
                                   
                     
-                </ul>
-                
+                </ul>                
             </div>
             
 
