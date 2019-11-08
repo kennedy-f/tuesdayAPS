@@ -165,7 +165,7 @@ export default function ({history})  {
                     </div>
                     <div className="createAccount">
                         
-                        <h3> Ainda não é cadastrado </h3>
+                        <h3> Ainda não é cadastrado? </h3>
                         <span id="create_acount">  Crie sua conta  </span>
                             <form onSubmit={handleCreate}>                     
                                 <label htmlFor="createUserLogin" id="nameLabel"> Campo obrigátorio * </label>
