@@ -25,15 +25,19 @@ export default props => {
 
     function removeUser(event){
         event.preventDefault();
+        if(!localStorage.getItem('_id')){
 
-        localStorage.removeItem('_id');
-        localStorage.removeItem('username');
-        localStorage.removeItem('user');
-        localStorage.removeItem('lib_id'); 
-        localStorage.removeItem('bag_id'); 
-        
-        alert('deslogado com sucesso')
-        window.location.reload();
+        } else{
+            localStorage.removeItem('_id');
+            localStorage.removeItem('username');
+            localStorage.removeItem('user');
+            localStorage.removeItem('lib_id'); 
+            localStorage.removeItem('bag_id'); 
+            
+            alert('deslogado com sucesso')
+            window.location.reload();
+        }
+
         
     }      
 
