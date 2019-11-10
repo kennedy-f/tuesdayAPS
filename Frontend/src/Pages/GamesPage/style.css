@@ -85,3 +85,7 @@
   border:#95f726 solid 1px; 
   color: #95f726;
 }
+
+#adminButton{
+    display: none;
+}

@@ -39,6 +39,21 @@ export default function (props){
         }
     }
 
+    useEffect (() => {
+        function showButton(){
+            if (localStorage.getItem('_id') === '5dc89e6dcc9f4c4e60238095'){ 
+                var adminButton = document.querySelector('#adminButton');
+                adminButton.style.display = 'initial'; 
+            }
+        }
+        showButton(); 
+
+    })
+
+    function editGame(){
+        window.location = 'edit?_id=' + _id._id; 
+    }
+
     
     
 
@@ -90,6 +105,7 @@ export default function (props){
             <div className="buttonArea">
                 <div></div>                
                 <button type="button" id="buyButton" onClick={buyGame} > Comprar </button>
+                <button type="button" id='adminButton' onClick={editGame}> Editar jogo </button>
             </div>
         </div>
     )
