@@ -33,6 +33,15 @@ module.exports = {
         const buyGame = await Game.find({ _id });
 
         return res.json(buyGame);
+    }, 
+    async update(req, res){
+        const _id = req.query; 
+        const { minReq, recReq, catgs, name, desc, price, highlight } = req.body;
+
+
+        // const changeGame = await Game.updateOne({ _id }, { $set: { minReq, recReq, catgs, name, desc, price, highlight }); 
+
+        return res.json({teste: 'tá chegando aqui '}); 
     }
     
     

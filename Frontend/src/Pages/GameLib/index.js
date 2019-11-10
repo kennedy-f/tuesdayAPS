@@ -2,7 +2,9 @@ import React, {useEffect, useState} from 'react';
 
 import api from '../../services/api'
 import './style.css'; 
-
+import downloadImage from '../../assets/DownloadButton.png'; 
+import downloadImage2 from '../../assets/DownloadButton2.png'; 
+ 
 export default function () {  
 
     const user = localStorage.getItem('bag_id');     
@@ -30,7 +32,11 @@ export default function () {
         
     },[])
     console.log(games);    
-    
+
+    function downloadGame(game, gameid){
+        alert('Download inciado '+ game);         
+    }
+   
     return (
         <>
         
@@ -42,6 +48,9 @@ export default function () {
                         <img src={game.thumbnail_url} alt=""/>
                         <div className="titleLib">
                             <h1 > {game.name} </h1>
+                        </div>
+                        <div className="buttonContainer">
+                            <button onClick={(event => downloadGame(game.name))}> <img src={downloadImage} alt="Download Button"/> </button>
                         </div>
                     </div>
                 ))}

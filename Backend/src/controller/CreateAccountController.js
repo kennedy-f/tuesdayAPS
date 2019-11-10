@@ -1,4 +1,4 @@
-// index = mostra tudo, show = mostra um, store = criar, updtate = alter, destroy = deletar destruir
+// index = mostra tudo, show = mostra um, store = criar, updtate = altera, destroy = deletar destruir
 const User = require('../model/User');
 const Bag = require('../model/Bag');
 

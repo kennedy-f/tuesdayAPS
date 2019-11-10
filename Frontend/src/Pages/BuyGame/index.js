@@ -54,6 +54,8 @@ export default function MyCart(){
         }
     }
 
+    
+
     console.log(game);
 
     return (

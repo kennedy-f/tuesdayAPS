@@ -8,6 +8,7 @@ import AddGame from './Pages/AddGame';
 import MinhaConta from './Pages/MyAccount'; 
 import GamePage from './Pages/GamesPage'; 
 import BuyGame from './Pages/BuyGame'; 
+import EditGame from './Pages/EditGame'; 
 
 export default function Routes (){
     return (
@@ -20,6 +21,7 @@ export default function Routes (){
                 <Route path="/minhaConta" component={MinhaConta} />   
                 
                 <Route path="/game" component={GamePage}/>
+                <Route path="/edit" component={EditGame}/>
                 <Route path="/buygame" component={BuyGame}/>
                 
                 

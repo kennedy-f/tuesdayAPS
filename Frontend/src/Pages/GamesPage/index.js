@@ -16,6 +16,7 @@ export default function (props){
 
     const _id = parsed.query;     
     
+    
     const [game, setGame] = useState([]); 
 
     useEffect(() => {
@@ -30,6 +31,14 @@ export default function (props){
         getGame(); 
 
     }, []);
+
+    function editGame(){
+        if(_id){
+            console.log(_id._id)
+                window.location = 'edit?_id=' + _id._id; 
+
+        }
+    }
 
     
     
@@ -78,11 +87,9 @@ export default function (props){
                     
 
                 </div>
-
             ))}
-            <Button >
-                Botão de comprar
-            </Button>
+            
+            <button type="button" id="buyButton" onClick={editGame} > Comprar </button>
         </div>
     )
 }

@@ -11,6 +11,7 @@
 .gameLib {  
   margin-top: 10px;
   display: flex;  
+  flex-direction: row;
   color: #95f726;
   border-bottom: 1px solid #696969;
   width: 100%;
@@ -23,8 +24,32 @@
   color: white;
   text-shadow: #95f726 1px 1px 10px;  
   vertical-align: middle;
+  width: 100%;
 }
 
 .gameLib img{  
   width: 20%;
+}
+.titleLib{
+  width: 100%;
+}
+
+.buttonContainer {  
+  margin-top: 131px;  
+  width: 100%;
+}
+
+.buttonContainer button {
+    align-self: end;  
+    float: right;
+    background-color: transparent;
+    border: transparent;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.buttonContainer button img {
+    width: 40px;
+    
+    
 }
