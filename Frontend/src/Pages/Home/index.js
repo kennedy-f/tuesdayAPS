@@ -14,7 +14,7 @@ import Game1 from '../../../src/assets/CapaForzaHorizon4Wivernz@2x.png'
 export default function Home() {
 
     const [highlightGames, setHighlightGames] = useState([]);
-    const categs = ['Ação', 'Corrida', 'Aventura']; 
+    const categs = ['Ação', 'Corrida', 'Aventura', 'Casual', 'Esportes', 'Estratégia', 'MMO', 'RPG', 'Simulação' ]; 
 
     var preview;
     preview = Game1;

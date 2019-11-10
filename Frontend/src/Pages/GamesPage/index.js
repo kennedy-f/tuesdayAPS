@@ -32,11 +32,10 @@ export default function (props){
 
     }, []);
 
-    function editGame(){
+    function buyGame(){
         if(_id){
             console.log(_id._id)
-                window.location = 'edit?_id=' + _id._id; 
-
+            window.location = 'buygame?_id=' + _id._id; 
         }
     }
 
@@ -88,8 +87,10 @@ export default function (props){
 
                 </div>
             ))}
-            
-            <button type="button" id="buyButton" onClick={editGame} > Comprar </button>
+            <div className="buttonArea">
+                <div></div>                
+                <button type="button" id="buyButton" onClick={buyGame} > Comprar </button>
+            </div>
         </div>
     )
 }

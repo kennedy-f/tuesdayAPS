@@ -102,7 +102,7 @@ export default function MyCart() {
                                             rows="10"
                                             cols="40"
                                             defaultValue={games.desc}                                    
-                                            onChange={event => setDesc(event.target.value)} />                                         
+                                            onChange={event => setDesc(event.target.value)} />                                                                          
                                         <label htmlFor="price"> Valor </label>
                                         <input
                                             type="text"
