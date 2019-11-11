@@ -99,7 +99,7 @@ export default function Home() {
                                 <img src={preview} alt="" className="slide" id="bigSlide"/>
                             </a>                            
                             <div className="middleText_highlight">
-                                <div className="text_highlight"> teste</div>
+                                <div className="text_highlight"> </div>
                             </div>
                         </div>
 

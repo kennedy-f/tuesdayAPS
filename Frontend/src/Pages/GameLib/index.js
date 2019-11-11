@@ -26,9 +26,12 @@ export default function () {
             
             
         }
-
         
-        getGames();        
+        getGames();   
+        
+        if(!games) {
+            alert('Biblioteca Vazia'); 
+        }
         
     },[])
     console.log(games);    

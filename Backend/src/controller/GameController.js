@@ -34,14 +34,29 @@ module.exports = {
 
         return res.json(buyGame);
     }, 
+
     async update(req, res){
-        const _id = req.query; 
-        const { catgs, name, desc, price, highlight } = req.body;
+        
+        const { _id, name, desc, catgs, price, highlight } = req.body;   
+        
+        if(name){
+            const changeName = await Game.updateOne({ _id }, { $set: { name} }); 
+        }
+        if (desc){
+            const changeName = await Game.updateOne({ _id }, { $set: { desc } }); 
+        }
+        if(catgs){
+            const changeName = await Game.updateOne({ _id }, { $set: { catgs } }); 
+        }
+        if(price){
+            const changeName = await Game.updateOne({ _id }, { $set: { price } }); 
+        }
+        if (highlight) {
+            const changeName = await Game.updateOne({ _id }, { $set: { highlight } });
+        }        
 
-
-        const changeGame = await Game.updateOne({ _id }, {  catgs, name, desc, price, highlight }); 
-
-        return res.json({teste: 'tá chegando aqui '}); 
+        return res.json(name); 
+        
     }
     
     

@@ -6,6 +6,7 @@ import api from '../../services/api';
 
 import './style.css';
 import { ButtonToolbar, ToggleButtonGroup , ToggleButton } from 'react-bootstrap';
+import { copyFile } from 'fs';
 
 export default function MyCart() {
     const logged = localStorage.getItem('username');
@@ -15,7 +16,9 @@ export default function MyCart() {
 
     const _id = parsed.query;
     const thisgame = _id;
+    const forUpdate = _id._id; 
 
+    
     const [game, setGame] = useState([]);
 
     useEffect(() => {
@@ -44,16 +47,17 @@ export default function MyCart() {
 
 
     async function handleEdit(event) {
-        event.preventDefault(); 
+        event.preventDefault();                 
+        
+        console.log(name); 
 
-        const response = await api.post('/editGame', { params: {"_id" : thisgame} } )
+        const response = await api.post('/editGame', {_id, name, desc, catgs, price, highlight});         
 
-        console.log(response); 
+        console.log(response.data); 
 
         
     }
-
-    console.log(game);
+    
 
     return (
         <>
