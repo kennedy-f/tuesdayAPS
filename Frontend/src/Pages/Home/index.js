@@ -99,7 +99,8 @@ export default function Home() {
                                 <img src={preview} alt="" className="slide" id="bigSlide"/>
                             </a>                            
                             <div className="middleText_highlight">
-                                <div className="text_highlight"> </div>
+                                <div className="text_highlight"> Mortal Kombat 11
+ </div>
                             </div>
                         </div>
 
@@ -126,14 +127,14 @@ export default function Home() {
                             </div>
 
                             <div className="highlightDesc">
-                                <h1 id="highlightTile"> FORZA HORIZON 4 </h1>
+                                <h1 id="highlightTile"> Mortal Kombat 11
+ </h1>
                                 <span >
-                                    <p> Aqui tem um texto bem loco </p>
-                                    <p> aqui tem mais outro </p>
+                                    Mortal Kombat 11 é um jogo de luta em que dois jogadores lutam um contra o outro, usando uma enorme variedade de ataques. Além de incluir várias mecânicas usadas em capítulos anteriores, em Mortal Kombat 11 cada lutador tem três ‘variações’ predefinidas pelos desenvolvedores, cada uma com o seu próprio estilo e lista de movimentos e com possibilidade de modificá-las e adicionar mai
 
                                 </span>
 
-                                <h1 id="valor" > R$  </h1>
+                                <h1 id="valor" > R$ 200,00 </h1>
 
                                 <div className="buttonArea">
                                     <div></div>                                    
