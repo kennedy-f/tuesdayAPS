@@ -40,35 +40,17 @@ export default function MyCart() {
     const [catgs, setCatgs] = useState(''); 
     const [desc, setDesc] = useState('');
     const [price, setPrice] = useState('');
-    const [minRequirement, setMinRequirement] = useState('');
-    const [recRequirement, setRecRequirement] = useState('');
     const [highlight, setHighlight] = useState('')
 
 
     async function handleEdit(event) {
         event.preventDefault(); 
 
-        
+        const response = await api.post('/editGame', { params: {"_id" : thisgame} } )
+
+        console.log(response); 
 
         
-
-        const user_id = localStorage.getItem('_id');
-        const response = await api.put('/buygame',
-            { params: _id },
-            { headers: { '_id': user_id } }
-
-
-        );
-        const almostHave = response.data;
-        console.log(almostHave);
-        if (almostHave.jogo === 'já comprado') {
-            alert('Você já tem esse jogo ');
-            window.location.href = '/biblioteca'
-
-        } else {
-            alert('Jogo comprado com sucesso')
-            window.location.href = '/biblioteca'
-        }
     }
 
     console.log(game);

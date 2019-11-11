@@ -27,7 +27,7 @@ routes.get('/biblioteca', LibController.index);
 routes.put('/buygame', GameCart.store);
 
 routes.post('/addGames', upload.single('thumbnail'), GameController.store);
-
+routes.post('/editGame', GameController.update); 
 
 
 module.exports = routes;

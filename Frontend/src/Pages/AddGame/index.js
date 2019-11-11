@@ -80,7 +80,13 @@ export default function ({history})  {
                                     <option value="none" >Selecione uma categoria</option>
                                     <option value="Ação"  >Ação</option>
                                     <option value="Aventura" >Aventura</option>
-                                    <option value="Race" >Corrida</option>
+                                    <option value="Corrida" >Corrida</option>
+                                    <option value="Casual" > Casual </option>
+                                    <option value="Esportes" >Esportes</option>
+                                    <option value="Estratégia" >Estratégia</option>
+                                    <option value="MMO" >MMO</option>
+                                    <option value="RPG" >RPG</option>
+                                    <option value="Simulação" >Simulação</option>
                                 </select>                            
 
                                 <label htmlFor="desc"> Descrição do jogo </label>
