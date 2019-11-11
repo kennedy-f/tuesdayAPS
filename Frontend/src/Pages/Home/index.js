@@ -6,7 +6,7 @@ import Anime from 'animejs';
 import './style.css';
 import Allcategories from '../../components/categories'
 
-import Game1 from '../../../src/assets/CapaForzaHorizon4Wivernz@2x.png'
+import Game1 from '../../../src/assets/MortalKombat11.jfif'
 //import Game2 from '../../../src/assets/FundoAssassinsCreedUnityGoldEditionELAMIGOSWivernz@2x.png'
 
 
@@ -134,7 +134,7 @@ export default function Home() {
 
                                 </span>
 
-                                <h1 id="valor" > R$ 200,00 </h1>
+                                <h1 id="valor" > R$  </h1>
 
                                 <div className="buttonArea">
                                     <div></div>                                    
