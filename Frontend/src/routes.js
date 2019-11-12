@@ -8,6 +8,7 @@ import AddGame from './Pages/AddGame';
 import GamePage from './Pages/GamesPage'; 
 import BuyGame from './Pages/BuyGame'; 
 import EditGame from './Pages/EditGame'; 
+import EditUser from './Pages/EditUser'; 
 
 export default function Routes (){
     return (
@@ -19,6 +20,7 @@ export default function Routes (){
                 <Route path="/addGame" component={AddGame} />         
                 <Route path="/game" component={GamePage}/>
                 <Route path="/edit" component={EditGame}/>
+                <Route path="/userEdit" component={EditUser}/>
                 <Route path="/buygame" component={BuyGame}/>
                 
                 

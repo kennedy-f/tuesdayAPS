@@ -25,12 +25,31 @@ module.exports = {
         
     }, 
     
-    async index(req, res ){
-        const { _id } = req.body;
+    async index(req, res) {
+        const { _id } = req.headers;
 
-        let user = await User.findOne({ _id }).select('games');
+        let user = await User.findOne({ _id} );
 
         return res.json(user)
+    }, 
+
+    async update(req, res){
+        const { _id, email, username, password} = req.body; 
+        let edit; 
+        if(username){
+            const edit = await User.updateOne({_id}, {$set : {username}})
+            
+        }
+        if(email){
+            const edit = await User.updateOne({_id}, {$set: {email}})
+            
+        }
+        if(password){
+            const edit = await User.updateOne({_id}, {$set : {password}})
+            
+        }
+
+        return res.json(edit); 
     }
 
 }

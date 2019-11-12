@@ -57,3 +57,7 @@ a:hover {
     color: #95f726; 
     
 }
+
+#adminAdd{
+    display: none;
+}

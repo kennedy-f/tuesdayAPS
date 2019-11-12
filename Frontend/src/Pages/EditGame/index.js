@@ -15,9 +15,7 @@ export default function MyCart({ history}) {
 
     const _id = parsed.query;
     const thisgame = _id;
-    const forUpdate = _id._id; 
-
-    
+    console.log(_id)
     const [game, setGame] = useState([]);
 
     useEffect(() => {
@@ -59,7 +57,7 @@ export default function MyCart({ history}) {
         
         console.log(name); 
 
-        const response = await api.post('/editGame', {_id, name, desc, catgs, price, highlight});         
+        const response = await api.post('/editGame', { _id, name, desc, catgs, price, highlight });         
 
         console.log(response.data); 
 
@@ -118,8 +116,6 @@ export default function MyCart({ history}) {
                                                 </ToggleButtonGroup>
                                             </ButtonToolbar>
                                         </div>
-                                        
-
                                         <button className="confirmation_btn" type="submit">
                                             <span className="button_text"> Editar Jogo </span>
                                         </button>

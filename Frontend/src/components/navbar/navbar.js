@@ -2,26 +2,52 @@ import React, {useState, useEffect} from 'react';
 
 import './Styles.css';
 
+import api from '../../services/api';
 
 export default props => {   
 
-    const [user, setUser] = useState(localStorage.getItem('username')); 
+    const [user, setUser] = useState([]); 
+    const [state, setState] = useState(''); 
 
     const [pageToload, setPageToLoad] = useState(''); 
     var notLogged;
 
+    const _id = localStorage.getItem('_id');
+
+    useEffect(() => {
+
+        async function getUser() {
+            const response = await api.get('/user', { headers: { _id } });
+            setUser(response.data);
+
+
+        }
+
+        getUser();
+        console.log(user);
+
+    }, []);
+
     useEffect (() => {
         function changePage(){
             if (localStorage.getItem('username') && user!== 'Fazer Login') {
-                setPageToLoad('/biblioteca'); 
+                setPageToLoad('/userEdit'); 
+                setState(user.username);
             }
             else {
                 setPageToLoad('/login');
-                setUser('Entrar');
+                setState('entrar');
             }
         }
         changePage();
     }, [user])
+
+    useEffect(() => {
+        if (localStorage.getItem('_id') === '5dc89e6dcc9f4c4e60238095'){
+            var admButton = document.querySelector('#adminAdd')
+            admButton.style.display = 'initial'
+        }
+    })
 
     function removeUser(event){
         event.preventDefault();
@@ -50,12 +76,18 @@ export default props => {
                 <ul >
                     <li> <a href="/"> Home </a> </li>                    
                     <li> <a href={pageToload}> Biblioteca </a> </li>                    
+                    <li>
+                        <div id="adminAdd">
+                            <a href="/addGame"> Adicionar jogos </a>
+                        </div> 
+                    </li>
+                    
                 </ul>               
 
                 <ul className="sacola">
 
                     <div>
-                        <a href={pageToload} id=""> {notLogged} {user} </a>                        
+                        <a href={pageToload} id=""> {notLogged} {state} </a>                        
                     </div>
                     
                     <div>

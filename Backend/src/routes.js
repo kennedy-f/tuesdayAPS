@@ -13,19 +13,27 @@ const LibController = require('./controller/LibController');
 const routes = express.Router(); 
 const upload = multer(uploadConfig); 
 
-routes.post('/createUser', CreateAccountController.store);
+//Usuario
+routes.post('/createUser', CreateAccountController.store); //criar usuario
+routes.post('/userLogin', LoginController.store); //Logar
+routes.get('/user', LoginController.index); 
+routes.put('/editUser', LoginController.update); 
 
-routes.post('/userLogin', LoginController.store);
+//biblioteca do usuario
 routes.get('/bibliotecaTeste', LibController.index);
+routes.get('/biblioteca', LibController.index);
 
+//Pagina dos jogos
 routes.get('/games', GameController.show);
 routes.get('/game', GameController.index);
 
+//Categoria dos jogos
 routes.get('/gamesCtg', GameCategories.index);
-routes.get('/biblioteca', LibController.index);
 
+//Compar jogo
 routes.put('/buygame', GameCart.store);
 
+//Área do admin (Edição e adicionar jogos)
 routes.post('/addGames', upload.single('thumbnail'), GameController.store);
 routes.post('/editGame', GameController.update); 
 
