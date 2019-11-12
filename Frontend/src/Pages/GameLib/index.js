@@ -39,6 +39,8 @@ export default function () {
     function downloadGame(game){
         alert('Download inciado '+ game);         
     }
+
+    
    
     return (
         <>
@@ -51,7 +53,7 @@ export default function () {
                     <div key={game._id} className="gameLib">
                         <img src={game.thumbnail_url} onClick={event => window.location.href = `/game?_id=${game._id}`} alt=""/>
                         <div className="titleLib">
-                            <h1 > {game.name} </h1>
+                            <h1 onClick={event => window.location.href = `/game?_id=${game._id}`}> {game.name} </h1>
                         </div>
                         <div className="buttonContainer">
                             <button onClick={(event => downloadGame(game.name))}> <img src={downloadImage} alt="Download Button"/> </button>

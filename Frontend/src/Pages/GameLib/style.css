@@ -25,10 +25,18 @@
   text-shadow: #95f726 1px 1px 10px;  
   vertical-align: middle;
   width: 100%;
+  cursor: pointer;
 }
 
 .gameLib img{  
   width: 20%;
+  cursor: pointer;
+  filter: grayscale(55%); 
+}
+.gameLib img:hover{
+  filter: grayscale(0%); 
+  
+  transform: scale(1.1);
 }
 .titleLib{
   width: 100%;
