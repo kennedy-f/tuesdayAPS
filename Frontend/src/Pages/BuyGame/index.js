@@ -37,11 +37,7 @@ export default function MyCart(){
 
     async function buyGame(){
         const user_id = localStorage.getItem('_id');
-        const response = await api.put('/buygame',                       
-            { params: id_game },
-            { headers: { '_id': user_id, 'bag_id': bag_id, 'game_id': id_game}}
-
-        );       
+        const response = await api.put('/buygame', {_id, bag_id, id_game} );       
               
         const almostHave = response.data;      
         console.log('Response')   

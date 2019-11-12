@@ -3,8 +3,7 @@ const Bag = require('../model/Bag');
 module.exports = {      
     
     async store(req, res){        
-        const { _id, bag_id } = req.headers;  
-        const { id_game } = req.query; 
+        const { _id, bag_id, id_game } = req.body
 
         const gameExist = await Bag.findOne({ id_user: _id }).findOne({ id_game});
         const bag = await Bag.find({ id_user: _id}); 
