@@ -14,18 +14,22 @@ export default function Categories({ catg }){
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5,
+            partialVisibilityGutter: 50
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 3000, min: 1024  },
             items: 5,
+            partialVisibilityGutter: 40
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
             items: 2,
+            partialVisibilityGutter: 30
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1,
+            partialVisibilityGutter: 30
         },
     };
     
@@ -50,9 +54,11 @@ export default function Categories({ catg }){
                 <Carousel 
                 swipeable={false}
                 draggable={false}
-                customTransition="all .5"
+                transitionDuration={500}
+                autoPlay={true}
                 responsive={responsive}                 
                 infinite={true}
+                focusOnSelect={true}
                 dotListClass="custom-dot-list-style"                 
                 showDots={true}
                 >
