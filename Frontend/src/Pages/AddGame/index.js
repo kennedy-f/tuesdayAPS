@@ -1,4 +1,4 @@
-import React, {useState, useMemo } from 'react'; 
+import React, {useState, useMemo, useEffect} from 'react'; 
 import './style.css';
 import api from '../../services/api';
 
@@ -45,6 +45,15 @@ export default function ({history})  {
         window.location.reload();
  
     } 
+
+    useEffect(() => {
+        if (localStorage.getItem('_id') === '5dc89e6dcc9f4c4e60238095' ){
+            console.log('admin logado')
+        } else { 
+            history.go('-1')
+            alert('Logue como administrador para ter acesso');
+        }
+    })
     
 
     return (

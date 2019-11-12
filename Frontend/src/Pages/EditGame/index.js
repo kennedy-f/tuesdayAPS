@@ -6,9 +6,8 @@ import api from '../../services/api';
 
 import './style.css';
 import { ButtonToolbar, ToggleButtonGroup , ToggleButton } from 'react-bootstrap';
-import { copyFile } from 'fs';
 
-export default function MyCart() {
+export default function MyCart({ history}) {
     const logged = localStorage.getItem('username');
     const pageUrl = window.location.href;
 
@@ -20,6 +19,15 @@ export default function MyCart() {
 
     
     const [game, setGame] = useState([]);
+
+    useEffect(() => {
+        if (localStorage.getItem('_id') === '5dc89e6dcc9f4c4e60238095') {
+            console.log('admin logado')
+        } else {            
+            history.go('-1')
+            alert('Logue como administrador para ter acesso');
+        }
+    })
 
     useEffect(() => {
         if (!logged) {
@@ -57,6 +65,8 @@ export default function MyCart() {
 
         
     }
+
+   
     
 
     return (

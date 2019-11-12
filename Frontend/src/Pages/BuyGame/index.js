@@ -13,7 +13,7 @@ export default function MyCart(){
     const parsed = qs.parseUrl(pageUrl);
 
     const _id = parsed.query; 
-    const thisgame = _id; 
+    const id_game = _id; 
     const bag_id = localStorage.getItem('bag_id');
     
     const [game, setGame] = useState([]); 
@@ -25,24 +25,28 @@ export default function MyCart(){
 
         }
         async function getGame() {
-            const response = await api.get('/game', { params: thisgame }  );
-            setGame(response.data);            
+            const response = await api.get('/game', { params: id_game }  );
+            setGame(response.data);       
+            
         }
 
         getGame();
 
     }, []);
-
+    console.log(id_game);
 
     async function buyGame(){
         const user_id = localStorage.getItem('_id');
-        const response = await api.put('/buygame',           
-            { params :  _id }, 
-            { headers: { '_id': user_id, 'bag_id': bag_id}}
-            
-            
-        );             
-        const almostHave = response.data;         
+        const response = await api.put('/buygame',                       
+            { params: id_game },
+            { headers: { '_id': user_id, 'bag_id': bag_id, 'game_id': id_game}}
+
+        );       
+              
+        const almostHave = response.data;      
+        console.log('Response')   
+        console.log(response.data); 
+        console.log('AlmostHave')   
         console.log(almostHave); 
         if (almostHave.jogo === 'já comprado') {
             alert('Você já tem esse jogo '); 
@@ -56,7 +60,7 @@ export default function MyCart(){
 
     
 
-    console.log(game);
+    
 
     return (
         <>

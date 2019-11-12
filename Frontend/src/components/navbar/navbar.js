@@ -12,7 +12,7 @@ export default props => {
 
     useEffect (() => {
         function changePage(){
-            if (user && user!== 'Fazer Login') {
+            if (localStorage.getItem('username') && user!== 'Fazer Login') {
                 setPageToLoad('/biblioteca'); 
             }
             else {

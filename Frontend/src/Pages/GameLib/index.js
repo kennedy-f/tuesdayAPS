@@ -18,25 +18,25 @@ export default function () {
 
     useState(() => {
         async function getGames(){
-            const response = await api.get('/bibliotecaTeste', {headers: {'_id' : user}});
-            
-            setGames(response.data);
-            
-            console.log(response.data); 
-            
-            
-        }
-        
-        getGames();   
-        
-        if(!games) {
-            alert('Biblioteca Vazia'); 
-        }
-        
-    },[])
-    console.log(games);    
 
-    function downloadGame(game, gameid){
+            const response = await api.get('/bibliotecaTeste', {headers: {'_id' : user}});            
+            
+            if(response.data.length !== 0){                                
+                console.log('não tá fechado')
+                setGames(response.data);                
+            }
+        }        
+        getGames();         
+    },[])    
+
+    useEffect(() => {
+        if (!games) {
+            alert('Biblioteca Vazia');
+
+        }
+    })
+
+    function downloadGame(game){
         alert('Download inciado '+ game);         
     }
    
@@ -47,6 +47,7 @@ export default function () {
             <h2> Meus Jogos </h2>
 
                 {games.map(game => (
+                    
                     <div key={game._id} className="gameLib">
                         <img src={game.thumbnail_url} alt=""/>
                         <div className="titleLib">

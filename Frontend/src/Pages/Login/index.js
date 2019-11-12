@@ -68,7 +68,7 @@ export default function ({history})  {
                 localStorage.setItem('bag_id', bag);
                 window.location.reload();
                 setTimeout(() => {
-                history.push('/') 
+                history.go('-1')
                 }, 1000)
                     
                     
@@ -118,7 +118,7 @@ export default function ({history})  {
         localStorage.setItem('lib_id', bag );
 
         setTimeout(() => {
-            window.location.href = '/';
+            history.go('-1')
         }, 1000); 
     }
 
