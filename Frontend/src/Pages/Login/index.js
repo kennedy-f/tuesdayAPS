@@ -115,7 +115,7 @@ export default function ({history})  {
         console.log(bag); 
         localStorage.setItem('_id', _id); 
         localStorage.setItem('username', createusername); 
-        localStorage.setItem('lib_id', bag );
+        localStorage.setItem('bag_id', bag );
 
         setTimeout(() => {
             history.go('-1')
