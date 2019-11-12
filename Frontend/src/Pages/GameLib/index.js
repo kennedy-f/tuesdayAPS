@@ -49,7 +49,7 @@ export default function () {
                 {games.map(game => (
                     
                     <div key={game._id} className="gameLib">
-                        <img src={game.thumbnail_url} alt=""/>
+                        <img src={game.thumbnail_url} onClick={event => window.location.href = `/game?_id=${game._id}`} alt=""/>
                         <div className="titleLib">
                             <h1 > {game.name} </h1>
                         </div>
