@@ -1,4 +1,4 @@
-<h1 align="center"> APS Terça - FMU </h1>
+<h1 align="center"> Game ecommerce </h1>
 
 <p align="center">
   
