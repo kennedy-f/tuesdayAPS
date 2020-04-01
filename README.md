@@ -1,6 +1,6 @@
 <h1 align="center"> Game ecommerce </h1>
 
-//<p align="center">
+<!-- <p align="center"> --> 
   
 <!-- <img src="https://user-images.githubusercontent.com/56175244/66710915-2d094d00-ed58-11e9-8f83-ee4532db9032.png"> --> 
 <!-- </p> --!> 
