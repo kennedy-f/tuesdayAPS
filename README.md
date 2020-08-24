@@ -17,5 +17,5 @@ Este projeto teve como intuito aproveitar o máximo possivel das 3 tecnologias. 
 
 No Backend temos uma APi completa, com cadastro de jogos, cadastro de úsuarios, validação de dados e upload de imagens. <br>
 
-No frontend temos uma aplicação completa salvando sessão e realizando a compra (sem validação da compra apenas para efeitos de apredizagem), a compra é salva no banco de dados e úsuario no final poderá baixar o jogo comprado em sua biblioteca com todos os jogos já comprados. 
+No frontend temos todo o UI/UX dessa aplicação usufruindo de todas as funcionalidades que a API disponibilizou, além de estar salvando sessão do úsuario logado.
 
